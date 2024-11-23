@@ -1,0 +1,83 @@
+\KOMAoptions{
+  numbers=noenddot,
+  headings=standardclasses,
+  chapterprefix=false,
+  paper=b5,                   % Papierformat ist DIN B5
+  fontsize=11pt
+}
+
+%% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%% Hierfür wird das CTAN-Paket MinionPro, zusammen mit den
+%% Type-1-Dateien der Minion Pro, benötigt.
+\usepackage[textosf,mathlf,opticals,footnotefigures]{MinionPro}
+
+%% Eine Dicktengleiche
+\usepackage[scaled=.8]{beramono}
+
+%% Sprache, Anführungszeichen, Datum
+\usepackage{babel}
+\usepackage{csquotes}
+\usepackage[cleanlook]{isodate}
+
+%% Mikrotypographie
+\usepackage{ellipsis}
+\usepackage[babel,letterspace=170]{microtype}
+
+%% Fancy tables
+\usepackage{booktabs}
+
+%% Farben
+\usepackage[dvipsnames]{xcolor}
+
+%% Wird für die Kapitelziffern benötigt.
+\usepackage{marginnote}
+
+%% Hyperref als letztes Paket
+\usepackage[bookmarksnumbered=true,unicode,pdfusetitle,hidelinks]{hyperref}
+
+%% Text nicht vertikal strecken
+\raggedbottom
+
+%% Akronyme
+\newcommand{\acr}[1]{\textsc{\textls[40]{\MakeLowercase{#1}}}}
+
+%% Etwas mehr Spacing für spaced small caps
+\SetTracking[spacing={100*,166,}]{encoding=*,shape=ssc}{15}
+\newcommand{\SAC}[1]{\textls{\MakeUppercase{#1}}}    % spaced all caps
+\newcommand{\SLSC}[1]{\textssc{\MakeLowercase{#1}}}  % spaced lowercase small caps
+
+%% Sections
+\addtokomafont{section}{\normalsize\sscshape\lsstyle\mdseries\MakeLowercase}
+\renewcommand*{\sectionformat}   {\upshape\mdseries\sscshape\thesection\enskip\hspace*{2px}}
+\RedeclareSectionCommand[afterskip=\baselineskip]{section}
+
+%% Subsections
+\addtokomafont{subsection}{\normalsize\mdseries\itshape}
+\renewcommand*{\subsectionformat}{\upshape\mdseries\scshape\thesubsection\enskip}
+\RedeclareSectionCommand[afterskip=\baselineskip]{subsection}
+
+%% Chapter
+\RedeclareSectionCommand[beforeskip=0\baselineskip,afterskip=1\baselineskip,afterindent=false]{chapter}
+\addtokomafont{chapter}{\mdseries\normalsize\lsstyle}
+\renewcommand*{\chapterformat}{\thechapter}%\normalsize\textssc{kapitel \thechapter}}
+\renewcommand{\chapterlinesformat}[3]{%
+  \MakeUppercase{#3}\par%
+  \marginnote{\smash{\fontsize{70}{60}\selectfont #2}}
+  \rule[-.15\baselineskip]{\linewidth}{.5pt}\par\nobreak
+}%
+
+%% Satzspiegel
+\areaset{300pt}{530pt}%
+\setlength{\marginparwidth}{8em}%
+\setlength{\marginparsep}{1.5em}%
+
+%% Keine Kopfzeilen
+\pagestyle{plain}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
