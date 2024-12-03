@@ -12,6 +12,19 @@
 %% Hyperref als letztes Paket
 \usepackage[bookmarksnumbered=true,unicode,pdfusetitle,hidelinks]{hyperref}
 
+%% schräge Schrift („slanted“)
+%% Quelle: https://tex.stackexchange.com/a/260952
+\newsavebox\foobox
+\newcommand{\slantbox}[2][.2]{\mbox{%
+    \sbox{\foobox}{#2}%
+    \hskip\wd\foobox
+    \pdfsave
+    \pdfsetmatrix{1 0 #1 1}%
+    \llap{\usebox{\foobox}}%
+    \pdfrestore
+  }}
+\def\textsl#1{\slantbox{#1}}
+
 \begin{document}
 
 \frontmatter
