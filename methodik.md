@@ -1,4 +1,4 @@
-# §0: Warm up #
+# §0: Warm-up #
   * Was seht Ihr?
     
 # §1: Zeichensetzung #
