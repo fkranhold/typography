@@ -1,5 +1,5 @@
 # §0: Warm up #
-    * Was seht Ihr?
+    * Was seht Ihr? (zu allen Themen)
     
 # §1: Zeichensetzung #
     * Einstieg: Leiden in der Stadt
