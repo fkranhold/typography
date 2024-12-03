@@ -5,7 +5,13 @@
 
 \input{layout}
 
+\usepackage{menukeys}
+\renewmenumacro{\keys}[+]{shadowedroundedkeys}
+
 \usepackage{lipsum}
+
+%% Hyperref als letztes Paket
+\usepackage[bookmarksnumbered=true,unicode,pdfusetitle,hidelinks]{hyperref}
 
 \begin{document}
 
