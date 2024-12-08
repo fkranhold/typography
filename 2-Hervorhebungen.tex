@@ -8,53 +8,55 @@ je nach Situation geeigneter als andere sein können.
 
 \section{Kursivsatz}
 
-Die wohl üblichste Methode, Passagen im Fließtext hervorzuheben, ist, sie
-\emph{kursiv} zu setzen. Diese Hervorhebung ist dezent und seit vielen
-Jahrhunderten etabliert. Fast alle Schriftarten bringen eigene Schriftschnitte
-für kursiven Text (siehe \cref{sec:Schnitte}) mit. Sollte ein kursiver
-Schriftschnitt fehlen, könnte das Textsatzprogramm versuchen, den Kursivsatz
-künstlich durch \textsl{Schrägen} zu erzeugen; davon ist abzuraten.
+\marginnote{\texttt{\textbackslash textit}}Die wohl üblichste Methode, Passagen
+im Fließtext hervorzuheben, ist, sie \emph{kursiv} zu setzen. Diese Hervorhebung
+ist dezent und seit vielen Jahrhunderten etabliert. Fast alle Schriftarten
+bringen eigene Schriftschnitte für kursiven Text (siehe \cref{sec:Schnitte})
+mit. Sollte ein kursiver Schriftschnitt fehlen, könnte das Textsatzprogramm
+versuchen, den Kursivsatz künstlich durch \textsl{Schrägen} zu erzeugen; davon
+ist abzuraten.
 
 \section{Fettdruck}
 
-Eine heutzutage sehr verbreitete, aber noch gar nicht so alte Methode der
-Hervorhebung ist die Verwendung von {\fontseries{eb}\selectfont {Fett-}} oder
-besser \textbf{Mittelfettbuchstaben}. Man sollte bedenken, dass diese
-Auszeichnungsart sehr hervorstricht. Üblicher ist es, Gliederungselemente wie
-Überschriften mit fetten Buchstaben zu setzen. In einem sehr klassischen Layout
-(wie dem dieses Skripts) taucht diese Auszeichnung kaum auf. Eine
+\marginnote{\texttt{\textbackslash textbf}}Eine heutzutage sehr verbreitete,
+aber noch gar nicht so alte Methode der Hervorhebung ist die Verwendung von
+{\fontseries{eb}\selectfont {Fett-}} oder besser
+\textbf{Mittelfettbuchstaben}. Man sollte bedenken, dass diese Auszeichnungsart
+sehr hervorstricht. Üblicher ist es, Gliederungselemente wie Überschriften mit
+fetten Buchstaben zu setzen. In einem sehr klassischen Layout (wie dem dieses
+Skripts) taucht diese Auszeichnung kaum auf. Eine
 \emph{{\fontseries{b}\selectfont{Kombination}}} von fett und kursiv ist zwar
 möglich, sticht aber extrem hervor und sollte deshalb mit äußerster Vorsicht
 eingesetzt werden.
 
 \section{Kapitälchen}
 
-Viele Schriftarten besitzen eine Variante der Großbuchstaben, die so hoch wie
-übliche Kleinbuchstaben ist. Diese Glyphen heißen \textsc{kapitälchen}. Man
-bemerke, dass sich diese Zeichen deutlich von einer reinen Skalierung der
-Großbuchstaben unterscheiden, zum Vergleich: \textsmaller[2]{KAPITÄLCHEN}; der
-wohl größte Unterschied ist die deutlich zu geringe Strichdicke. Bevor man
-Kapitälchen verwendet, sollte man also prüfen, ob die eingesetzte Schriftart
-solche enthält, da man sonst Gefahr läuft, Kapitälchen durch Skalierung zu
-imitieren.\looseness-1
+\marginnote{\texttt{\textbackslash textsc}}Viele Schriftarten besitzen eine
+Variante der Großbuchstaben, die so hoch wie übliche Kleinbuchstaben ist. Diese
+Glyphen heißen \textsc{kapitälchen}. Man bemerke, dass sich diese Zeichen
+deutlich von einer reinen Skalierung der Großbuchstaben unterscheiden, zum
+Vergleich: \textsmaller[2]{KAPITÄLCHEN}; der wohl größte Unterschied ist die
+deutlich zu geringe Strichdicke. Bevor man Kapitälchen verwendet, sollte man
+also prüfen, ob die eingesetzte Schriftart solche enthält, da man sonst Gefahr
+läuft, Kapitälchen durch Skalierung zu imitieren.\looseness-1
 
 Bei Kapitälchen wird nicht zwischen Groß- und Kleinbuchstaben
-unterschieden. Dennoch ist es geschieht es oft, dass Großbuchstaben in einer
+unterschieden. Dennoch sieht man oft, dass Großbuchstaben in einer
 Kapitälchenumgebung mit normalen Großbuchstaben gesetzt werden, also
-\textsc{Kapitälchen}. Gerade hier ist es wichtig, »echte« Kapitälchen zu
-nutzen; ansonsten erhält man so etwas wie K\textsmaller[2]{APITÄLCHEN}, also
+\textsc{Kapitälchen}. Gerade hier ist es wichtig, »echte« Kapitälchen zu nutzen;
+ansonsten erhält man so etwas wie K\textsmaller[2]{APITÄLCHEN}, also
 unterschiedliche Strichdicken im selben Wort.
 
-Kapitälchen werden häufig \emph{gesperrt}, d.\,h. der Abstand zwischen den
-einzelnen Buchstaben wird künstlich vergrößert, zum Vergleich:
+\marginnote{\texttt{\textbackslash textls}}Kapitälchen werden häufig
+\emph{gesperrt}, d.\,h. der Abstand zwischen den einzelnen Buchstaben wird
+künstlich vergrößert, zum Vergleich:
 \textls[50]{\textsc{kapitälchen}}. Kleinbuchstaben will man hingegen nicht
 \textls[50]{sperren}.
 
 Kapitälchen können an verschiedenen Stellen zum Einsatz kommen, und je nach
 Anwendung bietet sich ein anderer Sperrfaktor an. In diesem Skript werden
 Kapitälchen unter anderem für die Überschriften der Abschnitte verwendet. Nicht
-selten werden Namen wie \textls[15]{\textsc{immanuel kant} (1724–1804)} mit
-\todo{Tatsächlich hier die Jahreszahlen mit-sperren?  --~Philip}
+selten werden Namen wie \name{immanuel kant} (1724–1804) mit
 Kapitälchen hervorgehoben.\looseness-1
 
 \section{Exkurs: Akronyme}
@@ -81,13 +83,28 @@ Unterstreichungen sind \underline{Mist}, vor allem, wenn Buchstaben vorkommen,
 die \underline{Unterlänge} haben. Mogelt man und ignoriert Kollisionen, so wird
 es auch nicht besser: \underline{\smash{Unterlänge}}.
 
+\section{Umsetzung in \LaTeX}
 
-%% - Kursiv
-%% - Unterstreichen (mist)
-%% - Fett (modern)
-%% - Kapitälchen
-%% - Versalien
-%% - Sperren von Kapitälchen und Versalien
+Wenn einzelne Textpassagen auf eine der oben beschriebenen Weisen hervorgehoben
+werden sollen, können hierfür die am Seitenrand vermerkten Befehle genutzt
+werden, etwa: \verb!\textit{Hi}!.  Es ist allerdings zu empfehlen, eine
+bevorzugte Hervorhebungsmethode festzulegen (standardmäßig: Kursivsatz) und dann
+den Befehl \verb!\emph!  (für „emphasize“) zu verwenden.
+
+Der Befehl \verb!\textls! ist Teil des Microtype-Pakets.  Über einen optionalen
+Parameter (oder global zu Beginn) kann festgelegt werden, wie stark gesperrt
+wird. Hier zwei Beispiele:
+\begin{center}
+  \begin{tabular}{ll}
+    \verb!\textls[ 50]{\textsc{schön.}}! & \textls[ 50]{\textsc{schön.}}\\
+    \verb!\textls[200]{\textsc{schön?}}! & \textls[200]{\textsc{schön?}}\\
+  \end{tabular}
+\end{center}
+Um hingegen die Hevorhebungen für Überschriften festzulegen (etwa durch
+\verb!\setkomafont! bei Verwendung der \acr{KOMA}-Klassen), gibt man an, welche
+Schriftschnitte verwendet werden. Dies geschieht mit \verb!\itshape!,
+\verb!\bfseries! oder \verb!\scshape!. Um Versalien zu nutzen, kann der Befehl
+\verb!\MakeUppercase! eingesetzt werden.
 
 %%% Local Variables:
 %%% mode: latex

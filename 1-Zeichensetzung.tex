@@ -1,21 +1,33 @@
 \chapter{Zeichensetzung}
 
-\lipsum[1]\todo{Worum geht es hier?}
+Dieses erste Kapitel beschäftigt sich streng genommen noch nicht mit
+Typographie, sondern lediglich mit der semantisch korrekten Verwendung von
+Sonderzeichen in deutschen und englischen Texten. Für diese Problematik genügt
+es also, einen Text als reine Kette von wohldefinierten Zeichen zu betrachten.
+Durch den Unicode-Standard ist jedes dieser Zeichen durch einen
+eindeutigen hexadezimalen Codepoint (z.\,B. \texttt{0061} für »a«) festgelegt.
 
-\section{Anführungszeichen und Apostrophe}
+Die korrekte Verwendung grundlegender Satzzeichen (Punkt, Komma und Semikolon sowie
+Frage- und Ausrufezeichen) setzen wir als bekannt voraus. Bei einigen
+anderen Sonderzeichen gibt es jedoch Subtilitäten, die oft missachtet werden.
 
-Die Standardversionen der \emph{Anführungszeichen} sowohl im Deutschen
-als auch im Englischen sehen immer aus wie (gedrehte und verschobene)
-Kommata, also \Char{„}\,\Char{“}\,\Char{”} sowie die einfachen
-Varianten \Char{‚}\,\Char{‘}\,\Char{’}.  Je nachdem, wie sie gedreht
-sind, werden die einzelnen »Striche« als »6en« oder »9en« bezeichnet
--- denn sie sehen ein wenig aus wie verkleinerte und ausgefüllte
-Versionen dieser Ziffern (ein Komma \Char{,} sieht wie eine 9 aus).
+\section{Anführungszeichen}
+
+Die Standardversionen der \emph{Anführungszeichen} sowohl im Deutschen als auch
+im Englischen sehen aus wie (gedrehte und verschobene) Kommata, also
+\Char{„}\,\Char{“}\,\Char{”} sowie die einfachen Varianten
+\Char{‚}\,\Char{‘}\,\Char{’}.  Je nachdem, wie sie gedreht sind, werden die
+einzelnen Striche als »6en« oder »9en« bezeichnet -- denn sie sehen
+aus wie verkleinerte und ausgefüllte Versionen dieser Ziffern (ein Komma
+\Char{,} sieht wie eine 9 aus).\looseness-1
 
 Im Deutschen wird die Anführungszeichenkombination »99–66« benutzt, wobei die
 öffenen Anführungszeichen unten, die schließenden jedoch oben stehen, zum
 Beispiel: „Hallo!“ Bei verschachtelten Anführungszeichen werden innen einfache
 Anführungszeichen, also »9–6«, benutzt: „Er sagte: ‚Hallo!{‘}, und ging fort.“
+Wir merken an, dass das einfache öffnende deutsche Anführungszeichen \Char{‚}
+(\texttt{201a}) einen anderen Unicode-Codepoint als das Komma \Char{,}
+(\texttt{002c}) besitzt.\looseness-1
 
 Im Englischen wird (wenigstens im Britischen) die Kombination »6–9«,
 beide oben, verwendet, zum Beispiel: \foreignlanguage{british}{‘Hi!’}
@@ -27,40 +39,79 @@ Alternativ können im Deutschen auch die sogenannten \emph{Guillemets}
 \Char{»}\,\Char{«} verwendet werden, so wie in diesem Skript.  Innen
 werden dann die einfachen Guillements \Char{›}\,\Char{‹} verwendet.
 
-Wir weisen darauf hin, dass die auf einer Tastatur leichter zu
-erreichenden \emph{Ersatzzeichen} \Char{"} und \Char{\textquotesingle}
-(bei deutscher \acr{QWERTZ}-Belegung \keys{\shift+2}
-bzw. \keys{\shift+\#}) historische Relikte aus der
-Schreibmaschinenzeit und semantisch falsch sind.
-\todo{Auch hier schon Akzente erwähnen?  (Leute machen die wildesten
-  Dinge …)  --~Philip}
+Wir weisen darauf hin, dass die auf einer Tastatur leichter zu erreichenden
+\emph{Ersatzzeichen} \Char{\char"22} und \Char{\textquotesingle} (bei deutscher
+\acr{QWERTZ}-Belegung \keys{\shift+2} bzw. \keys{\shift+\#}) Überbleibsel
+aus der Schreibmaschinenzeit und semantisch falsch sind. Die freistehenden
+Akzent\-zeichen \Char{\textasciigrave} und \Char{´} sind ebenfalls keine
+Anführungszeichen.
 
-Der \emph{Apostroph} \Char{’} ist von einem einfachen schließenden englischen
-Anführungszeichen nicht zu unterscheiden.  Man sollte die Sprache, in der
-man schreibt, gut genug beherrschen, um zu wissen, wo Apostrophe hinkommen und
-wo nicht.\todo{Hier Han-Solo-Meme.}  Wichtig: Die freistehenden Akzentzeichen
-\Char{\textasciigrave} und \Char{´} sind, genau wie das Ersatzzeichen
-\Char{\textquotesingle}, \emph{keine} Apostrophe!
+Viele Programme (wie etwa \acr{MS} Word) ersetzen Ersatzzeichen automatisch durch
+Anführungszeichen in der eingestellten Sprache. In anderen Situationen ist es
+jedoch notwendig, die Zeichen manuell einzugeben. Auf einer Linux-Tastatur mit
+deutschen Layout gibt es hierfür praktische Tastenkombinationen; unter Windows
+kann man bei gehaltener \keys{Alt}-Taste nach einem \keys{{+}} den entsprechenden
+Unicode-Codepoint eingeben und anschließend die \keys{Alt}-Taste
+lösen. In \cref{tab:quotationMarks} finden sich die entsprechenden
+Tastenkombinationen und Codepoints.
 
+\begin{table}
+  \centering
+  \begin{tabular}{clc}
+    \toprule
+    \tableHead{Zeichen} & \tableHead{Linux-Tastatur} & \tableHead{Code}\\
+    \midrule
+    \Char{„} & \keys{\AltGr+v} & \texttt{201e}\\
+    \Char{“} & \keys{\AltGr+b} & \texttt{201c}\\
+    \Char{”} & \keys{\AltGr+n} & \texttt{201d}\\
+    \Char{‚} & \keys{\AltGr+\shift+v} & \texttt{201a}\\
+    \Char{‘} & \keys{\AltGr+\shift+b} & \texttt{2018}\\
+    \Char{’} & \keys{\AltGr+\shift+n} & \texttt{2019}\\
+    \Char{»} & \keys{\AltGr+y} & \texttt{00bb}\\
+    \Char{«} & \keys{\AltGr+x} & \texttt{00ab}\\
+    \Char{›} & \keys{\AltGr+\shift+y} & \texttt{203a}\\
+    \Char{‹} & \keys{\AltGr+\shift+x} & \texttt{2039}\\
+    \bottomrule
+  \end{tabular}
+  \caption{Anführungszeichen und wie sie erzeugt werden können.}\label{tab:quotationMarks}
+\end{table}
+
+\section{Apostrophe}
+
+Der \emph{Apostroph} \Char{’} sieht genauso aus wie ein einfaches schließendes
+englisches Anführungszeichen. Auch wenn es sich semantisch von diesem
+unterscheidet, hat es den gleichen Codepoint und wird daher genauso erzeugt.
+Man sollte die Sprache, in der man schreibt, gut genug beherrschen, um zu
+wissen, wo Apostrophe hinkommen und wo nicht.  Wichtig: Die freistehenden
+Akzentzeichen \Char{\textasciigrave} und \Char{´} sind, genau wie das
+Ersatzzeichen \Char{\textquotesingle}, \emph{keine} Apostrophe!\looseness-1
 
 \section{Striche}
 
-Es gibt verschiedene Arten von (horizontalen) \emph{Strichen}, die in
-Texten aller Art auftauchen.  Hier eine kleine Auswahl:
-\Char{-\,--\,---\,$-$\,$=$}.  Diese Striche haben verschiedene
-Aufgaben, die gerne verwechselt werden.  Typographisch unterscheiden
-wir die Striche üblicherweise nach ihrer Länge.
+Es gibt verschiedene Arten von (horizontalen) \emph{Strichen}, die in Texten
+aller Art auftauchen.  Hier eine kleine Auswahl:
+\Char{-}\,\Char{--}\,\Char{---}\,\Char{$-$}\,\Char{$=$}.  Diese Striche haben
+verschiedene Aufgaben, die gerne verwechselt werden.  Typographisch
+unterscheiden wir die Striche nach ihrer Länge.
 
-\paragraph{Viertelgeviertstrich}
-Der Viertelgeviertstrich \Char{-} ist der kürzeste der üblichen
-Striche.  Er wird auf Deutsch sowie auf Englisch als
-\emph{Trennstrich} bei Worttrennungen an Zeilenumbrüchen verwendet.
-Auf Deutsch ist er außerdem der \emph{Bindestrich} in nicht
-zusammenge\-schriebenen Komposita, bspw. in »Anti-Terror-Anschlag«.
-Dieses grammatikalische Phänomen nennt man \emph{Durchkopplung}; es
-betrifft auch die Zusammensetzung von Eigennamen aus mehreren Wörtern
-mit weiteren Wörtern zu einem Kompositum: bspw. wird aus »Johann
-Sebastian Bach« und »Straße« die »Johann-Sebastian-Bach-Straße«.
+Diese Längen werden als Anteil an einem \emph{Geviert} angegeben. Die Einheit
+eines Gevierts geht zurück auf die Zeit des Bleisatzes, uns soll folgende
+Faustregel genügen: Ein Geviert ist, je nach Schriftart, etwa das \smallfrac43-fache
+der Höhe eines Großbuchstabens (vgl. \cref{sec:Linien}).\todo{Bin noch
+  unzufrieden mit dieser Beschreibung, wollte es aber so knapp wie möglich
+  halten, weil das ja eigentlich Teil von §\,3 ist.}
+
+\subsection{Viertelgeviertstrich}
+Der\todo{Ich fand es mit Unterabschnitten jetzt doch deutlich schicker. Ich bin
+  aber Deiner Idee nachgekommen und habe den Abstand unter der Unterüberschrift
+  verkleinert.} Viertelgeviertstrich \Char{-} ist der kürzeste aller üblichen
+Striche.  Er wird auf Deutsch sowie auf Englisch als \emph{Trennstrich} bei
+Worttrennungen an Zeilenumbrüchen verwendet.  Auf Deutsch ist er außerdem der
+\emph{Bindestrich} in nicht zusammenge\-schriebenen Komposita, bspw. in
+»Anti-Terror-Anschlag«.  Dieses grammatikalische Phänomen nennt man
+\emph{Durchkopplung}; es betrifft auch die Zusammensetzung von Eigennamen aus
+mehreren Wörtern mit weiteren Wörtern zu einem Kompositum: bspw. wird aus
+»Johann Sebastian Bach« und »Straße« die »Johann-Sebastian-Bach-Straße«.
 
 Im Englischen gibt es üblicherweise \emph{keine} Durchkopplung, außer
 bei zusammengesetzten Adjektiven: es heißt »apple tree«, »anti-terror
@@ -72,24 +123,24 @@ Bindestrich gesetzt.  Dieses Skript könnte man bspw. das
 »Kranhold-Schwartz-Skript« nennen.  (Auf Englisch ist das anders,
 siehe unten.)
 
-\paragraph{Halbgeviertstrich}
-Der \emph{Halbgeviertstrich} \Char{--} ist doppelt so lang wie der
+\subsection{Halbgeviertstrich}
+\label{subsec:halbgeviert}
+Der Halbgeviertstrich \Char{--} ist doppelt so lang wie der
 Viertelgeviertstrich.  Er ist der \emph{Bis-Strich} in Zeitraumangaben
 wie »in den Jahren 2012--2023« oder »geöffnet Mo.--Fr. 9--18 Uhr«.
 Dabei ist zu beachten, dass er \emph{nicht} in der Phrase »von … bis
-…« das »bis« ersetzen darf: »von 11--13 Uhr« ist falsch.  Auch in
+…« das »bis« ersetzt: »von 11--13 Uhr« ist falsch.  Auch in
 Streckenangaben steht ein Halbgeviertstrich: »Auf der Strecke
 Köln--Karlsruhe fährt der \acr{ICE} 203.«
 
-Er kann auch als Aufzählungszeichen verwendet werden
-(»Spiegelstrich«):
+Er kann auch, in Form eines \emph{Spiegelstriches}, als Aufzählungszeichen
+verwendet werden (meistens sieht das aber nicht so gut aus und
+Aufzählungs\emph{punkte} \Char{\textbullet} sind besser):
 \begin{itemize}[label=--,nosep]
 \item Es gibt sone und
 \item solche, und
 \item dann gibt's noch ganz andere!
 \end{itemize}
-Meistens sieht das aber nicht so gut aus und Aufzählungs\emph{punkte}
-sind besser.
 
 Im Deutschen ist der Halbgeviertstrich, umschlossen von Leerzeichen,
 auch der \emph{Gedankenstrich}: »Ein Gedankenstrich sieht ganz gut
@@ -104,40 +155,62 @@ umschließende~-- Striche kleben an Wörtern, wohingegen~--
 aber Stopp, das führt jetzt zu weit.
 
 Auf Englisch wird traditionell der Halbgeviertstrich benutzt, um nach
-merheren Personen benannte Dinge zu schreiben.  Dieses Skript wären
+mehreren Personen benannte Dinge zu schreiben.  Dieses Skript wären
 dann also bspw. die »\foreignlanguage{british}{Kranhold--Schwartz
   course notes}«.  Manchmal (insb. in \acr{US}-amerikanischen /
 nordamerikanischen Kontexten, aber nicht nur da) wird dafür
 stattdessen aber wie auf Deutsch ein Viertelgeviertstrich verwendet.
 
-\paragraph{Geviertstrich}
-Der \emph{Geviertstrich} \Char{---} wird im Deutschen üblicherweise
-nicht verwendet; eine Ausnahme stellen manchmal Quellenangaben bei
+\subsection{Geviertstrich}
+
+Der Geviertstrich \Char{---} wird im Deutschen üblicherweise
+nicht verwendet; eine Ausnahme stellen Quellenangaben bei
 Zitaten dar:
 \begin{displayquote}
-  Musik ist wie ein Hamburger, die Noten sind die \mbox{Gurken}.
+  Musik ist wie ein Hamburger,\\
+  die Noten sind die \mbox{Gurken}.
 
   \quad---~J.\,S.\,Bach
 \end{displayquote}
+%
+In englischer Typographie wird oft ein Geviertstrich ohne umschließende
+Leerzeichen als Gedankenstrich verwendet: »\foreignlanguage{british}{This looks
+  quite interesting---but also somewhat peculiar for Germans.}« Oft wird aber
+auch im Englischen ein Gedankenstrich durch einen Halbgeviertstrich mit
+Leerzeichen realisiert.
 
-In englischer Typographie wird oft ein Geviertstrich ohne
-umschließende Leerzeichen als Gedankenstrich verwendet:
-»\foreignlanguage{british}{This looks quite interesting---but also
-  somewhat peculiar for Germans.}»  Oft wird aber auch im Englischen
-ein Halbgeviertstrich mit Leerzeichen verwendet.
+Der Viertelgeviertstrich hat auf einer \acr{QWERTZ}-Tastatur eine eigene Taste.
+In \cref{tab:striche} steht, wie man Halbgeviert- und Geviertstriche auf einer
+Tastatur erzeugen kann.
 
-\paragraph{Minuszeichen}
-Das im Formelsatz verwendete \emph{Minuszeichen} \Char{$-$} ist
-natürlich semantisch verschieden von den vorher beschriebenen
-Text-Strichen; in den meisten Schriftarten sieht es auch anders aus.
-Seine Breite entspricht der des Pluszeichens, und es ist vertikal
-zentriert.  Zum Beispiel ist $1 + 2 - 3 = 0$.
+\begin{table}
+  \centering
+  \begin{tabular}{lclc}
+    \toprule
+    \tableHead{Zeichen} & & \tableHead{Linux-Tastatur} & \tableHead{Code}\\
+    \midrule
+%    \midrule
+    Halbgeviertstrich & \Char{–} & \keys{\AltGr+-} & \texttt{2013}\\
+    Geviertstrich & \Char{—} & \keys{\AltGr+\shift+-} & \texttt{2014}\\
+%    Minuszeichen & \Char{\textminus} & & \texttt{2212}\\
+    \bottomrule
+  \end{tabular}
+  \caption{Striche und wie sie erzeugt werden können.}\label{tab:striche}
+\end{table}
 
-\paragraph{Gleichheitszeichen}
-Auch das \emph{Gleichheitszeichen} \Char{$=$} besteht natürlich aus
-horizontalen Strichen~-- nämlich \emph{Zwillings-Linien}, wie sein
-Erfinder \textls[15]{\textsc{robert recorde} (ca. 1510--1558)}
-schrieb:
+\subsection{Minus- und Gleichheitszeichen}
+
+Das im Formelsatz verwendete \emph{Minuszeichen} \Char{$-$} ist semantisch
+verschieden von den vorher beschriebenen Text-Strichen; in den meisten
+Schriftarten sieht es auch anders aus.\footnote{Im Formelsatz verwendet \LaTeX\ 
+  \emph{nochmal} andere Zeichen: Das korrekte Minus\-zeichen in der Schriftart
+  dieses Dokuments ist \Char{\textminus}; das des Formelsatzes ist \Char{$–$}.}
+Seine Breite entspricht der des Pluszeichens, und es ist vertikal zentriert:
+$1+2-3=0$.
+
+Auch das \emph{Gleichheitszeichen} \Char{$=$} besteht natürlich aus horizontalen
+Strichen~-- nämlich \emph{Zwillings-Linien}, wie sein Erfinder
+\name{\textsc{robert recorde} (ca. 1510--1558)} schrieb:
 \begin{displayquote}
   \foreignlanguage{british}{And to avoide the tediouse repetition of
     these woordes : is equalle to : I will sette as I doe often in
@@ -147,12 +220,54 @@ schrieb:
   \quad---~Robert Recorde, \emph{The Whetstone of Witte} (1557)
 \end{displayquote}
 
-In gebrochenen Schriften sieht außerdem der Trennstrich einem
-Gleichheitszeichen ähnlich.  Wir beschäftigen uns hier aber nicht mit
-gebrochenen Schriften.
+% In gebrochenen Schriften sieht außerdem der Trennstrich einem
+% Gleichheitszeichen ähnlich.  Wir beschäftigen uns hier aber nicht mit
+% gebrochenen Schriften.
+% Der Viertelgeviertstrich hat auf einer \acr{QWERTZ}-Tastatur eine eigene Taste;
+% das Gleichheitszeichen kann mit \keys{\shift+0} erzeugt werden. Wie die übrigen
+% Striche erzeugt werden, steht in \cref{tab:striche}. Will man explizit das
+% Minuszeichen als UnicodeFür das Minuszeichen gibt es leider keine praktische
+% Tastenkombination unter Linux; in einigen Desktopumgebungen (wie etwa
+% \acr{GNOME}) kann nach \keys{Strg+\shift+u} der Codepoint eingegeben werden, der
+% danach mit \keys{\return} bestätigt werden muss.  In \LaTeX{} taucht das
+% Minuszeichen ohnehin zumeist in der Mathematikumgebung auf, in einer solchen
+% wird es mit einem Viertelgeviertstrich codiert.
+
+
 
 \section{Leerzeichen}
 
+Das gewöhnliche Leerzeichen (\texttt{0020}) hat üblicherweise die Breite eines
+Viertelgevierts. Man sollte darauf achten, Leerzeichendopplungen zu vermeiden;
+solche fallen oft erst beim genauen Gegenlesen auf. (In \LaTeX\ oder \acr{HTML}
+spielen sie zum Glück keine Rolle, weil sie beim Kompilieren bzw. Rendern
+ignoriert werden.)
+
+Möchte man (wie z.\,B. in \cref{subsec:halbgeviert}) verhindern, dass bei einem
+ganz konkreten Leerzeichen ein Zeilenumbruch erfolgt, so verwendet man an dieser
+Stelle ein \emph{(umbruch-)geschütztes Leerzeichen} gleicher Breite
+(\texttt{00a0}). In \LaTeX\ wird dies durch \verb!~! realisiert.
+
+Das \emph{schmale Leerzeichen} (\texttt{2009}) ist zwischen \smallfrac18\ und
+\smallfrac16\ eines Gevierts breit und stets geschützt. In \LaTeX\ kann
+es durch \verb!\,! erzeugt werden. Es kommt u.\,a. an folgenden Stellen zum Einsatz:
+\begin{itemize}[nosep]
+\item Abkürzungen wie etwa d.\,h., z.\,B. oder i.\,d.\,R.,
+\item Datumsangaben wie etwa 28.\,12.\,2024,
+\item Abkürzungen mit Nummern wie etwa §\,3, Thm.\,4.7,
+\item Zahlen mit Einheitenzeichen wie etwa 87\,km oder 37\,\%.
+\end{itemize}
+
+%% Doppelte Leerzeichen vermeiden
+%% Schmale Leerzeichen
+%% Englisch?
+%% Umbruchgeschütz
+
+\section{Auslassungspunkte}
+
+Der Dreipunkt \Char{…} ist nicht etwa die Aneinanderreihung von
+drei (oder noch schlimmer: 4 oder 17) Punkten \Char{{.}{.}{.}}, sondern ein eigenständiges
+Zeichen (\texttt{2026}, Linux-Tastatur \keys{\AltGr+.}).
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"

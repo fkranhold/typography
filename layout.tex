@@ -14,6 +14,9 @@
 %% Type-1-Dateien der Minion Pro, benötigt.
 \usepackage[fullfamily,textosf,mathlf,opticals,footnotefigures]{MinionPro}
 
+%% Serifenlose
+\usepackage{classico}
+
 %% Eine Dicktengleiche
 \usepackage[scaled=.8]{beramono}
 
@@ -44,13 +47,25 @@
 %% Text nicht vertikal strecken
 \raggedbottom
 
+%% Hurenkinder verbieten
+\makeatletter
+  \widowpenalty=\@M
+\makeatother
+
 %% Akronyme
-\newcommand{\acr}[1]{\textsc{\textls[20]{\MakeLowercase{#1}}}}
+\newcommand{\acr}[1]{\textsc{\textls[40]{\MakeLowercase{#1}}}}
+
+%% Verschiedene Sperrungen von small caps
+\newcommand{\name}[1]{\textsc{\textls[40]{\MakeLowercase{#1}}}}
+\newcommand{\tableHead}[1]{\textsc{\textls[60]{\MakeLowercase{#1}}}}
 
 %% Etwas mehr Spacing für spaced small caps
 \SetTracking[spacing={100*,166,}]{encoding=*,shape=ssc}{15}
 \newcommand{\SAC}[1]{\textls{\MakeUppercase{#1}}}    % spaced all caps
 \newcommand{\SLSC}[1]{\textssc{\MakeLowercase{#1}}}  % spaced lowercase small caps
+
+%% Paragraph
+%\setkomafont{paragraph}{\sscshape\mdseries}
 
 %% Sections
 \addtokomafont{section}{\normalsize\sscshape\lsstyle\mdseries\MakeLowercase}
@@ -60,7 +75,7 @@
 %% Subsections
 \addtokomafont{subsection}{\normalsize\mdseries\itshape}
 \renewcommand*{\subsectionformat}{\upshape\mdseries\scshape\thesubsection\enskip}
-\RedeclareSectionCommand[afterskip=\baselineskip]{subsection}
+\RedeclareSectionCommand[afterskip=.75\baselineskip]{subsection}
 
 %% Chapter
 \RedeclareSectionCommand[beforeskip=0\baselineskip,afterskip=1\baselineskip,afterindent=false]{chapter}
@@ -80,9 +95,23 @@
 
 %% Keine Kopfzeilen
 \pagestyle{plain}
+ 
+%% Footnote-Design
+\usepackage{footmisc}
+\setlength{\footnotemargin}{0em}
+\deffootnote{0em}{0em}{%
+  \textsuperscript{\normalfont\thefootnotemark\ }}
+
 
 %% Einzelne Zeichen
+%\fboxsep0pt
+%\newcommand{\Char}[1]{\colorbox{black!10}{\strut\textcolor{Maroon}{\hspace*{1px}#1\hspace*{1px}}}}
 \newcommand{\Char}[1]{\textcolor{Maroon}{#1}}
+
+\usepackage[margin    =20pt,
+            font      ={footnotesize},
+            format    =plain,
+            labelsep  =period]{caption}
 
 %%% Local Variables:
 %%% mode: latex
