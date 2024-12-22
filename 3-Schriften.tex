@@ -1,28 +1,75 @@
 \chapter{Schriften}
 \label{ch:Schriften}
 
-%% Irgendwo in diesem Kapitel sollte das microtype-Paket gewürdigt werden.
+Das grundlegende Arbeitsmittel der Typographie ist natürlich die
+\emph{Schrift}.  Mit ihr wollen wir uns in diesem Kapitel umfassend
+beschäftigen.  Einige Aspekte haben wir schon gesehen; hier gehen wir
+aber weiter ins Detail.  Da sich die Gestaltung von Schrift »im
+Kleinen« abspielt (im Gegensatz zur Gestaltung von bspw. ganzen
+Seiten), wird das entsprechende Teilgebiet der Typographie auch als
+\emph{Mikrotypographie} bezeichnet.
+
+\section{Begriffliches und Klassifikation}
+
+Eine \emph{Glyphe} ist die konkrete graphische Realisierung eines
+(abstrakten) Schriftzeichens.  So sind bspw. \Char{a},
+\Char{\textlarger{a}}, \Char{\textsmaller{a}}, \Char{\textit{a}},
+\Char{\textbf{a}}, \Char{\textsf{a}}, \Char{\textsf{\textit{a}}} alles
+unterschiedliche Glyphen, die den \emph{lateinischen Kleinbuchstaben
+  a} darstellen.
+
+Zusammenhängende Texte werden in einer \emph{Schriftart} gesetzt; die
+darin vorhandenen Glyphen sind alle ähnlich und zueinander passend
+gestaltet~-- sonst ergibt sich {U\fontfamily{ptm}\selectfont
+  n\fontfamily{pplj}\selectfont r\fontfamily{lmr}\selectfont
+  u\fontfamily{uop}\selectfont h\fontfamily{pcr}\selectfont e}.  Liegt
+eine Schriftart in verschiedenen Varianten vor, was üblicherweise der
+Fall ist, so werden diese \emph{Schriftschnitte} genannt
+(s. \cref{sec:Schnitte}).  Eine solche Schriftart mit mehreren
+Schnitten nennt man dann auch eine \emph{Schriftfamilie}.\footnote{Das
+  ist das Beste, was ich (Philip) nach längerer Recherche zur
+  Unterscheidung der Begriffe \emph{Schriftart} und \emph{-familie}
+  herausbekommen zu haben glaube.  Allerdings fällt mir spontan
+  (während ich diesen Text schreibe) kein Beispiel für eine Schriftart
+  ein, von der es nur einen Schnitt gibt, die also keine Familie ist.}
+
+\begin{itemize}
+\item Schriftarten nach vielen Dingen klassifizierbar.  Alle
+  Schriften, die uns hier interessieren, sind \emph{Antiqua}-Schriften
+  (im Gegensatz zu gebrochenen Schriften, d.\,h. Fraktur und so).
+\item Gibt diverse Klassen (s. bspw. \acr{DIN}~16518).  Für uns hier
+  im Skript relevant: Mit Serifen und ohne (= Grotesk = Sans Serif =
+  Serifenlose Linear-Antiqua).
+\end{itemize}
 
 \section{Schriftschnitte}
 \label{sec:Schnitte}
 
-\section{Kerning und Spacing}
-\label{sec:KernSpace}
-
-\section{Ligaturen}
-
 \section{Liniensystem}
 \label{sec:Linien}
 
-\section{Serifen}
+%% Inkl. Maßeinheiten und so, und Zeilenabstand
+
+\section{Kerning und Spacing}
+\label{sec:KernSpace}
+
+%% Hier microtype erwähnen?
+
+\section{Ligaturen}
+
+%% Ligaturbrecher erwähnen!
 
 \section{Ziffern}
 \label{sec:Ziffern}
+
+%% Minuskelziffern, Majuskelziffern, Tabellenziffern / lining figures
 
 \section{Beispiele}
 
 {\fontfamily{pplj}\selectfont Palatino 1234 \emph{kursiv} \textsc{kapitälchen}}
 %% Garamond, Palatino, Minion, Optima/Classico, Times, Helvetica
+
+%% Jeweils auch die lustigen Namen nach DIN 16518 erwähnen!
 
 %%% Local Variables:
 %%% mode: latex
