@@ -40,9 +40,8 @@
 %% Wird für die Kapitelziffern benötigt.
 \usepackage{marginnote}
 
-%% Description-Listen
+%% Sinnvoll konfigurierbare Listen
 \usepackage{enumitem}
-\setlist[description]{font=\rmfamily\mdseries\scshape\MakeLowercase}
 
 %% Text nicht vertikal strecken
 %\raggedbottom
@@ -52,17 +51,33 @@
   \widowpenalty=\@M
 \makeatother
 
+%% Wir wollen, dass auch, wenn wir für Typographie alles groß oder
+%% klein setzen, trotzdem die korrekten Buchstaben kopiert werden und
+%% in PDF-Metadaten landen.
+\usepackage{accsupp}
+\makeatletter
+\newcommand*{\c@pyCorrectly}[2]{\texorpdfstring{%
+    \protect\BeginAccSupp{%
+      method=pdfstringdef,%
+      ActualText=#1%
+    }%
+    #2%
+    \protect\EndAccSupp{}}%
+  {#1}%
+}
+
 %% Akronyme
-\newcommand{\acr}[1]{\textsc{\textls[40]{\MakeLowercase{#1}}}}
+\newcommand*{\acr}[1]{\c@pyCorrectly{#1}{\textsc{\textls[40]{\MakeLowercase{#1}}}}}
 
 %% Verschiedene Sperrungen von small caps
-\newcommand{\name}[1]{\textsc{\textls[40]{\MakeLowercase{#1}}}}
-\newcommand{\tableHead}[1]{\textsc{\textls[60]{\MakeLowercase{#1}}}}
+\newcommand*{\name}[1]{\c@pyCorrectly{#1}{\textsc{\textls[40]{\MakeLowercase{#1}}}}}
+\newcommand*{\tableHead}[1]{\c@pyCorrectly{#1}{\textsc{\textls[60]{\MakeLowercase{#1}}}}}
 
 %% Etwas mehr Spacing für spaced small caps
 \SetTracking[spacing={100*,166,}]{encoding=*,shape=ssc}{15}
-\newcommand{\SAC}[1]{\textls{\MakeUppercase{#1}}}    % spaced all caps
-\newcommand{\SLSC}[1]{\textssc{\MakeLowercase{#1}}}  % spaced lowercase small caps
+\newcommand*{\SAC}[1]{\c@pyCorrectly{#1}{\textls{\MakeUppercase{#1}}}}    % spaced all caps
+\newcommand*{\SLSC}[1]{\c@pyCorrectly{#1}{\textssc{\MakeLowercase{#1}}}}  % spaced lowercase small caps
+\makeatother
 
 %% Paragraph
 %\setkomafont{paragraph}{\sscshape\mdseries}
@@ -107,8 +122,8 @@
 %% Einzelne Zeichen
 %\fboxsep0pt
 %\newcommand{\Char}[1]{\colorbox{black!10}{\strut\textcolor{Maroon}{\hspace*{1px}#1\hspace*{1px}}}}
-\newcommand{\Char}[1]{\textcolor{Maroon}{#1}}
-\newcommand{\tab}[1]{\figureversion{tab}{#1}}
+\newcommand*{\Char}[1]{\textcolor{Maroon}{#1}}
+\newcommand*{\tab}[1]{\figureversion{tab}{#1}}
 
 \usepackage[margin    =20pt,
             font      ={footnotesize},

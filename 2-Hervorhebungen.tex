@@ -36,10 +36,11 @@ Viele\marginnote{\texttt{\textbackslash textsc}} Schriftarten besitzen eine
 Variante der Großbuchstaben, die so hoch wie übliche Kleinbuchstaben ist. Diese
 Glyphen heißen \textsc{kapitälchen}. Man bemerke, dass sich diese Zeichen
 deutlich von einer reinen Skalierung der Großbuchstaben unterscheiden, zum
-Vergleich: \textsmaller[2]{KAPITÄLCHEN}; der wohl größte Unterschied ist die
-deutlich zu geringe Strichdicke. Bevor man Kapitälchen verwendet, sollte man
-also prüfen, ob die eingesetzte Schriftart solche enthält, da man sonst Gefahr
-läuft, Kapitälchen durch Skalierung zu imitieren.\looseness-1
+Vergleich: \textsmaller[2]{KAPITÄLCHEN}; der wohl größte Unterschied ist die bei
+den skalierten Großbuchstaben deutlich zu geringe Strichdicke. Bevor man
+Kapitälchen verwendet, sollte man also prüfen, ob die eingesetzte Schriftart
+solche enthält, da man sonst Gefahr läuft, Kapitälchen durch Skalierung zu
+imitieren.\looseness-1
 
 Bei Kapitälchen wird nicht zwischen Groß- und Kleinbuchstaben
 unterschieden. Dennoch geschieht es oft, dass zur Unterscheidung »normale«
@@ -65,10 +66,10 @@ Kapitälchen hervorgehoben.\looseness-1
 Es ist ratsam, \emph{Akronyme} wie etwa \acr{spd} oder \acr{PHP} mit leicht
 gesperrten Kapitälchen zu setzen, damit sie nicht, wie etwa SPD und PHP,
 hervorstechen. Bei Akronymen, die Zahlen enthalten (wie etwa \acr{3D},
-\acr{C-3PO} oder \acr{BW\kern-.3px V\,29}), müssen dann aber
-\emph{Minuskelziffern} (siehe \cref{sec:Ziffern}) verwendet, sonst erhält man
-\acr{\figureversion{lf}{3}d}, \acr{C-\figureversion{lf}{3}PO} und
-\acr{bw\kern-.3px v\,\figureversion{lf}{29}}.
+\acr{C-\kern-1pt3PO} oder \acr{BW\kern-.3px V\,29}), müssen dann aber
+\emph{Minuskelziffern} (siehe \cref{sec:Ziffern}) verwendet werden, sonst erhält
+man \acr{\figureversion{lf}{3}d}, \acr{C-\kern-1pt\figureversion{lf}{3}PO} und
+\acr{BW\kern-.3px V\,\figureversion{lf}{29}}.
 
 \section{Versalien}
 
@@ -92,7 +93,7 @@ werden, etwa: \verb!\textit{Hi}!.  Es ist allerdings zu empfehlen, eine
 bevorzugte Hervorhebungsmethode festzulegen (standardmäßig: Kursivsatz) und dann
 den Befehl \verb!\emph!  (für »emphasize«) zu verwenden.
 
-Der Befehl \verb!\textls! ist Teil des Microtype-Pakets.  Über einen optionalen
+Der Befehl \verb!\textls! ist Teil des \texttt{microtype}-Pakets.  Über einen optionalen
 Parameter (oder global zu Beginn) kann festgelegt werden, wie stark gesperrt
 wird. Hier zwei Beispiele:
 \begin{center}

@@ -97,10 +97,11 @@ aller Art auftauchen.  Hier eine kleine Auswahl:
 verschiedene Aufgaben, die gerne verwechselt werden.  Typographisch
 unterscheiden wir die Striche nach ihrer Länge.
 
-Diese Längen werden als Anteil an einem \emph{Geviert} angegeben. Die Einheit
-eines Gevierts geht zurück auf die Zeit des Bleisatzes, uns soll folgende
-Faustregel genügen: Ein Geviert ist, je nach Schriftart, etwa das \smallfrac43-fache
-der Höhe eines Großbuchstabens (vgl. \cref{sec:Linien}).
+Diese Längen werden als Anteil an einem \emph{Geviert} angegeben~--
+eine Einheit, die auf die Zeit des Bleisatzes zurückgeht.  Uns soll
+hier folgende Faustregel genügen: Ein Geviert ist, je nach Schriftart,
+etwa das \smallfrac43-fache der Höhe eines Großbuchstabens
+(vgl. \cref{sec:Linien}).
 
 \subsection{Viertelgeviertstrich}
 \label{subsec:Viertel}
@@ -134,14 +135,15 @@ Dabei ist zu beachten, dass er \emph{nicht} in der Phrase »von … bis
 Streckenangaben steht ein Halbgeviertstrich: »Auf der Strecke
 Köln--Karlsruhe fährt der \acr{ICE} 203.«
 
-Er kann auch, in Form eines \emph{Spiegelstriches}, als Aufzählungszeichen
-verwendet werden (meistens sieht das aber nicht so gut aus und
-Aufzählungs\emph{punkte} \Char{\textbullet} sind besser):
-\begin{itemize}[label=--,nosep]
-\item Es gibt sone und
-\item solche, und
-\item dann gibt's noch ganz andere!
-\end{itemize}
+Er kann auch als Aufzählungszeichen verwendet werden (dann nennt man
+ihn manchmal »Spiegelstrich«):
+ \begin{itemize}[label=--,nosep]
+ \item Es gibt sone und
+ \item solche, und
+ \item dann gibt's noch ganz andere!
+ \end{itemize}
+ Meistens sieht das aber nicht so gut aus und Aufzählungs\emph{punkte}
+ \Char{\textbullet} sind besser.
 
 Im Deutschen ist der Halbgeviertstrich, umschlossen von Leerzeichen,
 auch der \emph{Gedankenstrich}: »Ein Gedankenstrich sieht ganz gut
@@ -202,17 +204,15 @@ Tastatur erzeugen kann.
 
 \subsection{Minus- und Gleichheitszeichen}
 
-Das im Formelsatz verwendete \emph{Minuszeichen} \Char{$-$} ist semantisch
-verschieden von den vorher beschriebenen Text-Strichen; in den meisten
-Schriftarten sieht es auch anders aus.\footnote{Im Formelsatz verwendet \LaTeX\ 
-  \emph{nochmal} andere Zeichen: Das korrekte Minus\-zeichen in der Schriftart
-  dieses Dokuments ist \Char{\textminus}; das des Formelsatzes ist \Char{$–$}.}
-Seine Breite entspricht der des Pluszeichens, und es ist vertikal zentriert:
+Das im Formelsatz verwendete \emph{Minuszeichen} \Char{$-$} ist
+semantisch verschieden von den vorher beschriebenen Text-Strichen; in
+den meisten Schriftarten sieht es auch anders aus.  Seine Breite
+entspricht der des Pluszeichens, und es ist vertikal zentriert:
 $1+2-3=0$.
 
 Auch das \emph{Gleichheitszeichen} \Char{$=$} besteht natürlich aus horizontalen
 Strichen~-- nämlich \emph{Zwillings-Linien}, wie sein Erfinder
-\name{robert recorde} (ca. 1510--1558) schrieb:
+\name{Robert Recorde} (ca. 1510--1558) schrieb:
 \begin{displayquote}
   \foreignlanguage{british}{And to avoide the tediouse repetition of
     these woordes : is equalle to : I will sette as I doe often in
@@ -221,6 +221,13 @@ Strichen~-- nämlich \emph{Zwillings-Linien}, wie sein Erfinder
 
   \quad---~Robert Recorde, \emph{The Whetstone of Witte} (1557)
 \end{displayquote}
+
+Für diese Formelzeichen gibt es bei \LaTeX\ eine weitere
+Unterscheidung zwischen zwei Varianten: es gibt jeweils eine für
+Verwendung im Text sowie eine für Verwendung in Formelsatz.  Das
+korrekte Minus- und Gleichheitszeichen in der Schriftart dieses
+Dokuments im Text sind \Char{\textminus} bzw. \Char{=}; die des
+Formelsatzes sind \Char{$-$} bzw. \Char{$=$}.
 
 % In gebrochenen Schriften sieht außerdem der Trennstrich einem
 % Gleichheitszeichen ähnlich.  Wir beschäftigen uns hier aber nicht mit
@@ -245,31 +252,51 @@ solche fallen oft erst beim genauen Gegenlesen auf. (In \LaTeX\ oder \acr{HTML}
 spielen sie zum Glück keine Rolle, weil sie beim Kompilieren bzw. Rendern
 ignoriert werden.)
 
-Möchte man (wie z.\,B. in \cref{subsec:halbgeviert}) verhindern, dass bei einem
+Möchte man (wie z.\,B. bei Gedankenstrichen) verhindern, dass bei einem
 ganz konkreten Leerzeichen ein Zeilenumbruch erfolgt, so verwendet man an dieser
 Stelle ein \emph{(umbruch-)geschütztes Leerzeichen} gleicher Breite
 (\texttt{00a0}). In \LaTeX\ wird dies durch \verb!~! realisiert.
 
 Das \emph{schmale Leerzeichen} (\texttt{2009}) ist zwischen \smallfrac18\ und
 \smallfrac16\ eines Gevierts breit und stets geschützt. In \LaTeX\ kann
-es durch \verb!\,! erzeugt werden. Es kommt u.\,a. an folgenden Stellen zum Einsatz:
+es durch \verb!\,! erzeugt werden. Es kommt u.\,a. zum Einsatz in
 \begin{itemize}[nosep]
 \item Abkürzungen wie etwa d.\,h., z.\,B. oder i.\,d.\,R.,
 \item Datumsangaben wie etwa 28.\,12.\,2024,
 \item Abkürzungen mit Nummern wie etwa §\,3, Thm.\,4.7,
-\item Zahlen mit Einheitenzeichen wie etwa 87\,km oder 37\,\%.
+\item Zahlen mit Einheitenzeichen wie etwa 87\,km oder 37\,\%,
+\item großen Zahlen wie 12\,345.
 \end{itemize}
 
-%% Doppelte Leerzeichen vermeiden
-%% Schmale Leerzeichen
-%% Englisch?
-%% Umbruchgeschütz
+Auf Englisch gibt es folgende zwei Besonderheiten:
+\begin{itemize}[nosep]
+\item In Abkürzungen wie »\foreignlanguage{british}{i.e.}« steht
+  üblicherweise \emph{kein} Leerzeichen, auch kein schmales.
+\item Traditionell werden die Leerzeichen zwischen Sätzen ein wenig
+  verbreitert (sog. \emph{\foreignlanguage{british}{English spacing}},
+  im Gegensatz zum im Deutschen üblichen
+  \emph{\foreignlanguage{british}{French spacing}}):
+
+  »\foreignlanguage{british}{I went there.  After that, I went
+    somewhere else.}«
+
+  »\foreignlanguage{british}{\frenchspacing I went there.  After that,
+    I went somewhere else.}«
+\end{itemize}
+
 
 \section{Auslassungspunkte}
 
-Der Dreipunkt \Char{…} ist nicht etwa die Aneinanderreihung von
-drei (oder noch schlimmer: 4 oder 17) Punkten \Char{{.}{.}{.}}, sondern ein eigenständiges
-Zeichen (\texttt{2026}, Linux-Tastatur \keys{\AltGr+.}).
+Der \emph{Dreipunkt} (auch die \emph{Ellipse}) \Char{…}, mit dem
+Auslassungspunkte gesetzt werden, ist nicht etwa die Aneinanderreihung
+von drei (oder noch schlimmer: vier oder 17) Punkten \Char{{.}{.}{.}},
+sondern ein eigenständiges Zeichen (\texttt{2026}, Linux-Tastatur
+\keys{\AltGr+.}).  Wird ein Satzteil ausgelassen, so wird der
+Dreipunkt mit einem geschützten Leerzeichen angehängt; wird ein
+Wortteil ausgelassen, bekommt er natürlich kein Leerzeichen: »Manche
+Leute mögen denken, das sei ganz große Sch… ganz großer
+Scheibenkleister.  Aber so sieht es einfach besser aus~…«
+
 %%% Local Variables:
 %%% mode: latex
 %%% TeX-master: "main"
