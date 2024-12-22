@@ -5,7 +5,7 @@ Typographie, sondern lediglich mit der semantisch korrekten Verwendung von
 Sonderzeichen in deutschen und englischen Texten. Für diese Problematik genügt
 es also, einen Text als reine Kette von wohldefinierten Zeichen zu betrachten.
 Durch den Unicode-Standard ist jedes dieser Zeichen durch einen
-eindeutigen hexadezimalen Codepoint (z.\,B. \texttt{0061} für »a«) festgelegt.
+eindeutigen, üblicherweise hexadezimal angegebenen \emph{Codepoint} (z.\,B. \codepoint{0061} für »a«) festgelegt.
 
 Die korrekte Verwendung grundlegender Satzzeichen (Punkt, Komma und Semikolon sowie
 Frage- und Ausrufezeichen) setzen wir als bekannt voraus. Bei einigen
@@ -26,8 +26,8 @@ Im Deutschen wird die Anführungszeichenkombination »99–66« benutzt, wobei d
 Beispiel: „Hallo!“ Bei verschachtelten Anführungszeichen werden innen einfache
 Anführungszeichen, also »9–6«, benutzt: „Er sagte: ‚Hallo!{‘}, und ging fort.“
 Wir merken an, dass das einfache öffnende deutsche Anführungszeichen \Char{‚}
-(\texttt{201a}) einen anderen Unicode-Codepoint als das Komma \Char{,}
-(\texttt{002c}) besitzt.\looseness-1
+(\codepoint{201a}) einen anderen Unicode-Codepoint als das Komma \Char{,}
+(\codepoint{002c}) besitzt.\looseness-1
 
 Im Englischen wird (wenigstens im Britischen) die Kombination »6–9«,
 beide oben, verwendet, zum Beispiel: \foreignlanguage{british}{‘Hi!’}
@@ -62,18 +62,18 @@ Codepoints.
   \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{clc}
     \toprule
-    \tableHead{Zeichen} & \tableHead{Linux-Tastatur} & \tableHead{Code}\\
+    \tableHead{Zeichen} & \tableHead{Linux-Tastatur} & \tableHead{Codepoint}\\
     \midrule
-    \Char{„} & \keys{\AltGr+v} & \texttt{201e}\\
-    \Char{“} & \keys{\AltGr+b} & \texttt{201c}\\
-    \Char{”} & \keys{\AltGr+n} & \texttt{201d}\\
-    \Char{‚} & \keys{\AltGr+\shift+v} & \texttt{201a}\\
-    \Char{‘} & \keys{\AltGr+\shift+b} & \texttt{2018}\\
-    \Char{’} & \keys{\AltGr+\shift+n} & \texttt{2019}\\
-    \Char{»} & \keys{\AltGr+y} & \texttt{00bb}\\
-    \Char{«} & \keys{\AltGr+x} & \texttt{00ab}\\
-    \Char{›} & \keys{\AltGr+\shift+y} & \texttt{203a}\\
-    \Char{‹} & \keys{\AltGr+\shift+x} & \texttt{2039}\\
+    \Char{„} & \keys{\AltGr+v} & \codepoint{201e}\\
+    \Char{“} & \keys{\AltGr+b} & \codepoint{201c}\\
+    \Char{”} & \keys{\AltGr+n} & \codepoint{201d}\\
+    \Char{‚} & \keys{\AltGr+\shift+v} & \codepoint{201a}\\
+    \Char{‘} & \keys{\AltGr+\shift+b} & \codepoint{2018}\\
+    \Char{’} & \keys{\AltGr+\shift+n} & \codepoint{2019}\\
+    \Char{»} & \keys{\AltGr+y} & \codepoint{00bb}\\
+    \Char{«} & \keys{\AltGr+x} & \codepoint{00ab}\\
+    \Char{›} & \keys{\AltGr+\shift+y} & \codepoint{203a}\\
+    \Char{‹} & \keys{\AltGr+\shift+x} & \codepoint{2039}\\
     \bottomrule
   \end{tabular}
   \caption{Anführungszeichen und wie sie erzeugt werden können.}\label{tab:quotationMarks}
@@ -191,12 +191,12 @@ Tastatur erzeugen kann.
   \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{lclc}
     \toprule
-    \tableHead{Zeichen} & & \tableHead{Linux-Tastatur} & \tableHead{Code}\\
+    \tableHead{Zeichen} & & \tableHead{Linux-Tastatur} & \tableHead{Codepoint}\\
     \midrule
 %    \midrule
-    Halbgeviertstrich & \Char{–} & \keys{\AltGr+-} & \texttt{2013}\\
-    Geviertstrich & \Char{—} & \keys{\AltGr+\shift+-} & \texttt{2014}\\
-%    Minuszeichen & \Char{\textminus} & & \texttt{2212}\\
+    Halbgeviertstrich & \Char{–} & \keys{\AltGr+-} & \codepoint{2013}\\
+    Geviertstrich & \Char{—} & \keys{\AltGr+\shift+-} & \codepoint{2014}\\
+%    Minuszeichen & \Char{\textminus} & & \codepoint{2212}\\
     \bottomrule
   \end{tabular}
   \caption{Striche und wie sie erzeugt werden können.}\label{tab:striche}
@@ -246,7 +246,7 @@ Formelsatzes sind \Char{$-$} bzw. \Char{$=$}.
 
 \section{Leerzeichen}
 
-Das gewöhnliche Leerzeichen (\texttt{0020}) hat üblicherweise die Breite eines
+Das gewöhnliche Leerzeichen (\codepoint{0020}) hat üblicherweise die Breite eines
 Viertelgevierts. Man sollte darauf achten, Leerzeichendopplungen zu vermeiden;
 solche fallen oft erst beim genauen Gegenlesen auf. (In \LaTeX\ oder \acr{HTML}
 spielen sie zum Glück keine Rolle, weil sie beim Kompilieren bzw. Rendern
@@ -255,9 +255,9 @@ ignoriert werden.)
 Möchte man (wie z.\,B. bei Gedankenstrichen) verhindern, dass bei einem
 ganz konkreten Leerzeichen ein Zeilenumbruch erfolgt, so verwendet man an dieser
 Stelle ein \emph{(umbruch-)geschütztes Leerzeichen} gleicher Breite
-(\texttt{00a0}). In \LaTeX\ wird dies durch \verb!~! realisiert.
+(\codepoint{00a0}). In \LaTeX\ wird dies durch \verb!~! realisiert.
 
-Das \emph{schmale Leerzeichen} (\texttt{2009}) ist zwischen \smallfrac18\ und
+Das \emph{schmale Leerzeichen} (\codepoint{2009}) ist zwischen \smallfrac18\ und
 \smallfrac16\ eines Gevierts breit und stets geschützt. In \LaTeX\ kann
 es durch \verb!\,! erzeugt werden. Es kommt u.\,a. zum Einsatz in
 \begin{itemize}[nosep]
@@ -290,7 +290,7 @@ Auf Englisch gibt es folgende zwei Besonderheiten:
 Der \emph{Dreipunkt} (auch die \emph{Ellipse}) \Char{…}, mit dem
 Auslassungspunkte gesetzt werden, ist nicht etwa die Aneinanderreihung
 von drei (oder noch schlimmer: vier oder 17) Punkten \Char{{.}{.}{.}},
-sondern ein eigenständiges Zeichen (\texttt{2026}, Linux-Tastatur
+sondern ein eigenständiges Zeichen (\codepoint{2026}, Linux-Tastatur
 \keys{\AltGr+.}).  Wird ein Satzteil ausgelassen, so wird der
 Dreipunkt mit einem geschützten Leerzeichen angehängt; wird ein
 Wortteil ausgelassen, bekommt er natürlich kein Leerzeichen: »Manche
