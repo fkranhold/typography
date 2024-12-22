@@ -36,8 +36,9 @@ Anführungszeichen, also »66–99«, benutzt:
 \foreignlanguage{british}{‘“Hi!”, he said, and went away.’}
 
 Alternativ können im Deutschen auch die sogenannten \emph{Guillemets}
-\Char{»}\,\Char{«} verwendet werden, so wie in diesem Skript.  Innen
-werden dann die einfachen Guillements \Char{›}\,\Char{‹} verwendet.
+\Char{»}\,\Char{«} verwendet werden, so wie in diesem Skript.  Innen werden dann
+die einfachen Guillements \Char{›}\,\Char{‹} verwendet. Allerdings sollte man
+sich für eine Variante entscheiden und diese konsequent benutzen.
 
 Wir weisen darauf hin, dass die auf einer Tastatur leichter zu erreichenden
 \emph{Ersatzzeichen} \Char{\char"22} und \Char{\textquotesingle} (bei deutscher
@@ -46,17 +47,19 @@ aus der Schreibmaschinenzeit und semantisch falsch sind. Die freistehenden
 Akzent\-zeichen \Char{\textasciigrave} und \Char{´} sind ebenfalls keine
 Anführungszeichen.
 
-Viele Programme (wie etwa \acr{MS} Word) ersetzen Ersatzzeichen automatisch durch
-Anführungszeichen in der eingestellten Sprache. In anderen Situationen ist es
-jedoch notwendig, die Zeichen manuell einzugeben. Auf einer Linux-Tastatur mit
-deutschen Layout gibt es hierfür praktische Tastenkombinationen; unter Windows
-kann man bei gehaltener \keys{Alt}-Taste nach einem \keys{{+}} den entsprechenden
-Unicode-Codepoint eingeben und anschließend die \keys{Alt}-Taste
-lösen. In \cref{tab:quotationMarks} finden sich die entsprechenden
-Tastenkombinationen und Codepoints.
+Viele Programme (wie etwa \acr{MS} Word) ersetzen eingegebene Ersatzzeichen
+automatisch durch die korrekten Anführungszeichen in der eingestellten
+Sprache. In anderen Situationen ist es jedoch notwendig, die Zeichen manuell
+einzugeben. Auf einer Linux-Tastatur mit deutschem Layout gibt es hierfür
+praktische Tastenkombinationen; unter Windows kann man bei gehaltener
+\keys{Alt}-Taste nach einem \keys{{+}} den entsprechenden Unicode-Codepoint
+eingeben und anschließend die \keys{Alt}-Taste lösen. In
+\cref{tab:quotationMarks} finden sich die entsprechenden Tastenkombinationen und
+Codepoints.
 
 \begin{table}
   \centering
+  \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{clc}
     \toprule
     \tableHead{Zeichen} & \tableHead{Linux-Tastatur} & \tableHead{Code}\\
@@ -97,14 +100,12 @@ unterscheiden wir die Striche nach ihrer Länge.
 Diese Längen werden als Anteil an einem \emph{Geviert} angegeben. Die Einheit
 eines Gevierts geht zurück auf die Zeit des Bleisatzes, uns soll folgende
 Faustregel genügen: Ein Geviert ist, je nach Schriftart, etwa das \smallfrac43-fache
-der Höhe eines Großbuchstabens (vgl. \cref{sec:Linien}).\todo{Bin noch
-  unzufrieden mit dieser Beschreibung, wollte es aber so knapp wie möglich
-  halten, weil das ja eigentlich Teil von §\,3 ist.}
+der Höhe eines Großbuchstabens (vgl. \cref{sec:Linien}).
 
 \subsection{Viertelgeviertstrich}
-Der\todo{Ich fand es mit Unterabschnitten jetzt doch deutlich schicker. Ich bin
-  aber Deiner Idee nachgekommen und habe den Abstand unter der Unterüberschrift
-  verkleinert.} Viertelgeviertstrich \Char{-} ist der kürzeste aller üblichen
+\label{subsec:Viertel}
+
+Der Viertelgeviertstrich \Char{-} ist der kürzeste aller üblichen
 Striche.  Er wird auf Deutsch sowie auf Englisch als \emph{Trennstrich} bei
 Worttrennungen an Zeilenumbrüchen verwendet.  Auf Deutsch ist er außerdem der
 \emph{Bindestrich} in nicht zusammenge\-schriebenen Komposita, bspw. in
@@ -185,6 +186,7 @@ Tastatur erzeugen kann.
 
 \begin{table}
   \centering
+  \renewcommand{\arraystretch}{1.2}
   \begin{tabular}{lclc}
     \toprule
     \tableHead{Zeichen} & & \tableHead{Linux-Tastatur} & \tableHead{Code}\\
@@ -210,7 +212,7 @@ $1+2-3=0$.
 
 Auch das \emph{Gleichheitszeichen} \Char{$=$} besteht natürlich aus horizontalen
 Strichen~-- nämlich \emph{Zwillings-Linien}, wie sein Erfinder
-\name{\textsc{robert recorde} (ca. 1510--1558)} schrieb:
+\name{robert recorde} (ca. 1510--1558) schrieb:
 \begin{displayquote}
   \foreignlanguage{british}{And to avoide the tediouse repetition of
     these woordes : is equalle to : I will sette as I doe often in
