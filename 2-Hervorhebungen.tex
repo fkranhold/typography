@@ -1,14 +1,15 @@
 \chapter{Hervorhebungen}
+\label{ch:Emph}
 
 Oft ist man in der Situation, dass der eigentliche Text in einer bestimmten
 Schrift gesetzt ist, aber beispielsweise einzelne Wörter oder
 Gliederungselemente (wie Titel und Überschriften) zur besseren Übersichtlichkeit
 \emph{hervorgehoben} werden sollen. Hierfür gibt es verschiedene Möglichkeiten, die
-je nach Situation verschieden geeigneten sein können.
+je nach Situation verschieden geeignet sein können.
 
 \section{Kursivsatz}
 
-\marginnote{\texttt{\textbackslash textit}}Die wohl üblichste Methode, Passagen
+Die\marginnote{\texttt{\textbackslash textit}} wohl gängigste Methode, Passagen
 im Fließtext hervorzuheben, ist, sie \emph{kursiv} zu setzen. Diese Hervorhebung
 ist dezent und seit vielen Jahrhunderten etabliert. Fast alle Schriftarten
 bringen eigene Schriftschnitte für kursiven Text (siehe \cref{sec:Schnitte})
@@ -18,19 +19,20 @@ ist abzuraten.
 
 \section{Fettdruck}
 
-\marginnote{\texttt{\textbackslash textbf}}Eine heutzutage sehr verbreitete, aber noch gar nicht so alte Methode der
-Hervorhebung ist die Verwendung von {\fontseries{eb}\selectfont {Fett-}} oder
-besser \textbf{Mittelfettbuchstaben}. Man sollte bedenken, dass diese
-Auszeichnungsart sehr hervorsticht. Üblicher ist es, Gliederungselemente wie
-Überschriften mit fetten Buchstaben zu setzen. In einem sehr klassischen Layout
-(wie dem dieses Skripts) taucht diese Auszeichnung kaum auf. Eine
+Eine\marginnote{\texttt{\textbackslash textbf}} heutzutage sehr verbreitete,
+aber noch gar nicht so alte Methode der Hervorhebung ist die Verwendung von
+{\fontseries{eb}\selectfont {Fett-}} oder besser
+\textbf{Mittelfettbuchstaben}. Man sollte bedenken, dass diese Auszeichnungsart
+sehr hervorsticht. Üblicher ist es, Gliederungselemente wie Überschriften mit
+fetten Buchstaben zu setzen. In einem klassischen Layout (wie dem dieses
+Skripts) taucht diese Auszeichnung kaum auf. Eine
 \emph{{\fontseries{b}\selectfont{Kombination}}} von fett und kursiv ist zwar
-möglich, sticht aber extrem hervor und sollte deshalb mit äußerster Vorsicht
-eingesetzt werden.
+möglich, sticht aber sehr hervor und sollte deshalb mit Vorsicht eingesetzt
+werden.\looseness-1
 
 \section{Kapitälchen}
 
-\marginnote{\texttt{\textbackslash textsc}}Viele Schriftarten besitzen eine
+Viele\marginnote{\texttt{\textbackslash textsc}} Schriftarten besitzen eine
 Variante der Großbuchstaben, die so hoch wie übliche Kleinbuchstaben ist. Diese
 Glyphen heißen \textsc{kapitälchen}. Man bemerke, dass sich diese Zeichen
 deutlich von einer reinen Skalierung der Großbuchstaben unterscheiden, zum
@@ -89,7 +91,7 @@ Wenn einzelne Textpassagen auf eine der oben beschriebenen Weisen hervorgehoben
 werden sollen, können hierfür die am Seitenrand vermerkten Befehle genutzt
 werden, etwa: \verb!\textit{Hi}!.  Es ist allerdings zu empfehlen, eine
 bevorzugte Hervorhebungsmethode festzulegen (standardmäßig: Kursivsatz) und dann
-den Befehl \verb!\emph!  (für „emphasize“) zu verwenden.
+den Befehl \verb!\emph!  (für »emphasize«) zu verwenden.
 
 Der Befehl \verb!\textls! ist Teil des \texttt{microtype}-Pakets.  Über einen optionalen
 Parameter (oder global zu Beginn) kann festgelegt werden, wie stark gesperrt

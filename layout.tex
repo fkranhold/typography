@@ -44,7 +44,7 @@
 \usepackage{enumitem}
 
 %% Text nicht vertikal strecken
-\raggedbottom
+%\raggedbottom
 
 %% Hurenkinder verbieten
 \makeatletter
@@ -85,12 +85,12 @@
 %% Sections
 \addtokomafont{section}{\normalsize\sscshape\lsstyle\mdseries\MakeLowercase}
 \renewcommand*{\sectionformat}   {\upshape\mdseries\sscshape\thesection\enskip\hspace*{2px}}
-\RedeclareSectionCommand[afterskip=\baselineskip]{section}
+\RedeclareSectionCommand[afterskip=1\baselineskip plus 2pt minus 2pt]{section}
 
 %% Subsections
 \addtokomafont{subsection}{\normalsize\mdseries\itshape}
 \renewcommand*{\subsectionformat}{\upshape\mdseries\scshape\thesubsection\enskip}
-\RedeclareSectionCommand[afterskip=.75\baselineskip]{subsection}
+\RedeclareSectionCommand[afterskip=.75\baselineskip plus 2pt minus 2pt]{subsection}
 
 %% Chapter
 \RedeclareSectionCommand[beforeskip=0\baselineskip,afterskip=1\baselineskip,afterindent=false]{chapter}
@@ -107,6 +107,7 @@
 \areaset{288pt}{480pt}%
 \setlength{\marginparwidth}{8em}%
 \setlength{\marginparsep}{1.5em}%
+\setlength{\footskip}{2.5\baselineskip}
 
 %% Keine Kopfzeilen
 \pagestyle{plain}
