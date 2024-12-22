@@ -246,25 +246,38 @@ solche fallen oft erst beim genauen Gegenlesen auf. (In \LaTeX\ oder \acr{HTML}
 spielen sie zum Glück keine Rolle, weil sie beim Kompilieren bzw. Rendern
 ignoriert werden.)
 
-Möchte man (wie z.\,B. in \cref{subsec:halbgeviert}) verhindern, dass bei einem
+Möchte man (wie z.\,B. bei Gedankenstrichen) verhindern, dass bei einem
 ganz konkreten Leerzeichen ein Zeilenumbruch erfolgt, so verwendet man an dieser
 Stelle ein \emph{(umbruch-)geschütztes Leerzeichen} gleicher Breite
 (\texttt{00a0}). In \LaTeX\ wird dies durch \verb!~! realisiert.
 
 Das \emph{schmale Leerzeichen} (\texttt{2009}) ist zwischen \smallfrac18\ und
 \smallfrac16\ eines Gevierts breit und stets geschützt. In \LaTeX\ kann
-es durch \verb!\,! erzeugt werden. Es kommt u.\,a. an folgenden Stellen zum Einsatz:
+es durch \verb!\,! erzeugt werden. Es kommt u.\,a. zum Einsatz in
 \begin{itemize}[nosep]
 \item Abkürzungen wie etwa d.\,h., z.\,B. oder i.\,d.\,R.,
 \item Datumsangaben wie etwa 28.\,12.\,2024,
 \item Abkürzungen mit Nummern wie etwa §\,3, Thm.\,4.7,
-\item Zahlen mit Einheitenzeichen wie etwa 87\,km oder 37\,\%.
+\item Zahlen mit Einheitenzeichen wie etwa 87\,km oder 37\,\%,
+\item großen Zahlen wie 12\,345.
 \end{itemize}
 
-%% Doppelte Leerzeichen vermeiden
-%% Schmale Leerzeichen
-%% Englisch?
-%% Umbruchgeschütz
+Auf Englisch gibt es folgende zwei Besonderheiten:
+\begin{itemize}[nosep]
+\item In Abkürzungen wie »\foreignlanguage{british}{i.e.}« steht
+  üblicherweise \emph{kein} Leerzeichen, auch kein schmales.
+\item Traditionell werden die Leerzeichen zwischen Sätzen ein wenig
+  verbreitert (sog. \emph{\foreignlanguage{british}{English spacing}},
+  im Gegensatz zum im Deutschen üblichen
+  \emph{\foreignlanguage{british}{French spacing}}):
+
+  »\foreignlanguage{british}{I went there.  After that, I went
+    somewhere else.}«
+
+  »\foreignlanguage{british}{\frenchspacing I went there.  After that,
+    I went somewhere else.}«
+\end{itemize}
+
 
 \section{Auslassungspunkte}
 
