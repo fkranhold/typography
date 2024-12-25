@@ -398,9 +398,43 @@ die Zeilen sonst zu »gedrängt« wirken; zum Vergleich siehe
   \label{fig:Palatino_Zeilenabstand}
 \end{figure}
 
-\section{Spationierung und Unterschneidung}
+\section{Laufweite, Sperren und Unterschneidung}
 
-%% Hier microtype erwähnen?
+Die horizontale Weite einer Schrift nennt man die \emph{Laufweite}.
+Diese ist bedingt durch die Breite der einzelnen Glyphen
+inkl. zusätzlicher Abstände (Vor- und Nachbreite), die
+sog. \emph{Dickte}.  Beim Bleisatz war die Dickte die Breite der
+Lettern (siehe \cref{fig:Bleiletter}).  Die Festlegung der Laufweite
+ist ein Aspekt des Schriftdesigns: verschiedene Schriftschnitte
+brauchen unterschiedliche Abstände zwischen den Glyphen; siehe
+\cref{fig:Schriftstärken,fig:Schriftlagen,fig:Schriftbreiten,fig:optische_Größen}.
+Bei sog. \emph{dicktengleichen} Schriften
+(engl. \emph{\foreignlanguage{british}{monospaced}}) haben alle
+Glyphen dieselbe Dickte.  Diese Schriften waren bspw. auf
+Schreibmaschinen üblich oder werden auf Computern in
+Terminalemulatoren oder in Reintext-Editoren verwendet.
+\texttt{Dicktengleicher Text sieht bspw. so aus.}
+
+Eine Vergrößerung der Glyphenabstände nennt man \emph{Sperren}
+(engl. \emph{\foreignlanguage{british}{letterspacing}}) oder auch
+\emph{Spationieren}, historisch \emph{Spatiieren}.  Beim Bleisatz
+wurden dafür \emph{Spatien}, kleine Abstandshalter, zwischen die
+Lettern gesetzt; digital braucht man die natürlich nicht.  Beim
+Textsatz mit Antiqua-Schriften\footnote{Bei gebrochenen Schriften war
+  Sperren eine übliche Form der Hervorhebung.} ist Sperren einerseits
+üblich zum Umsetzen von Blocksatz (siehe \cref{subsec:Blocksatz}), wo
+es aber automatisch durch die Software geschieht; andererseits
+empfehlen wir es für ein ausgeglicheneres Schriftbild beim Setzen von
+Kapitälchen (siehe \cref{sec:Kapitälchen}).  Kleinbuchstaben will man
+hingegen nicht \textls[50]{sperren}, denn das sieht schlecht aus.
+Digital kann man die Abstände zwischen den Glyphen natürlich auch
+\emph{verringern}, was im Bleisatz nicht möglich war.  Dabei spricht
+man üblicherweise nicht von »Sperren«.  Das passiert automatisch bei
+Blocksatz; ansonsten braucht man es nicht (und möchte es nicht, denn
+es sieht schlecht aus).  Trotzdem ist hier ein \textls[-50]{Beispiel},
+das deulich zu eng aussieht.
+
+%% Kerning
 
 \section{Ligaturen}
 
@@ -415,6 +449,10 @@ die Zeilen sonst zu »gedrängt« wirken; zum Vergleich siehe
 \label{sec:Ziffern}
 
 %% Minuskelziffern, Majuskelziffern, Tabellenziffern / lining figures
+
+\section{Hängende Interpunktion}
+
+%% Kurz erklären, microtype erwähnen (auch sonst toll!)
 
 \section{Beispiele}
 
