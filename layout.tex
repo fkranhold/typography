@@ -68,7 +68,11 @@
 }
 
 %% Akronyme
-\newcommand*{\acr}[1]{\c@pyCorrectly{#1}{\textsc{\textls[40]{\MakeLowercase{#1}}}}}
+%% Optionales Argument für Reintext-Version (bspw. ohne Kerning)
+\usepackage{xifthen}
+
+\newcommand*{\@cr}[2]{\c@pyCorrectly{#1}{\textsc{\textls[40]{\MakeLowercase{#2}}}}}
+\newcommand*{\acr}[2][]{\ifthenelse{\isempty{#1}}{\@cr{#2}{#2}}{\@cr{#1}{#2}}}
 
 %% Verschiedene Sperrungen von small caps
 \newcommand*{\name}[1]{\c@pyCorrectly{#1}{\textsc{\textls[40]{\MakeLowercase{#1}}}}}
