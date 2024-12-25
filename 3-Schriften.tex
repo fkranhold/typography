@@ -478,12 +478,47 @@ o, was zwar schlimm aussieht, aber das Prinzip verdeutlicht.
 
 \section{Ligaturen}
 
-%% Ligatur = eine Glyphe für mehrere Buchstaben.  Sinnvoll, um
-%% ruhigeres Schriftbild zu erreichen.  Traditionelle Ligaturen aus
-%% lateinischen Texten; je nach Sprache zusätzliche.  Fun fact: ß =
-%% ſ-z- oder ſ-s-Ligatur.  (Problem: die Minion hat kein ſ :( )
+Eine \emph{Ligatur} ist eine gemeinsame Glyphe für mehrere
+aufeinanderfolgende Buchstaben (oder andere Zeichenfolgen), in der
+Teile der einzelnen Zeichen miteinander »verschmelzen« (siehe
+\cref{fig:Ligatur}).  Ligaturen werden eingesetzt, um ein ruhigeres
+und gleichmäßigeres Schriftbild zu erreichen.  Aus dem Satz von
+lateinischen Texten gibt es traditionelle Ligaturen bei den
+Buchstabenkombinationen \Char{ff}, \Char{fi}, \Char{fl}, \Char{ffi},
+\Char{ffl}; je nach Sprache gibt es zusätzliche, bspw. auf Deutsch
+\Char{ft}.
 
-%% Ligaturbrecher erwähnen!
+\begin{figure}
+  \centering
+
+  \begin{minipage}{.15\textwidth}
+    \centering\Large
+    f"|f → ff\\
+    f"|i → fi\\
+    f"|j → fj\\
+    f"|l → fl
+  \end{minipage}
+  \hspace{.1\textwidth}
+  \begin{minipage}{.15\textwidth}
+    \centering\Large
+    f"|t → ft\\
+    f"|f"|i → ffi\\
+    \emph{f"|f} → \emph{ff}
+  \end{minipage}
+
+  \caption{Beispiele für Ligaturen}
+  \label{fig:Ligatur}
+\end{figure}
+
+An \emph{Wortfugen} werden keine Ligaturen gesetzt; so schreibt man
+bspw. \emph{Kaffee}, aber \emph{auf"|fangen}.  In \LaTeX\ mit dem
+\texttt{babel}-Paket wird das über den \emph{Ligaturbrecher} \verb!"|!
+erreicht.
+
+\newcommand*{\longS}{\includegraphics{long_s}\kern-.5pt}
+
+Ein lustiger \emph{fun fact}™: Einige Ligaturen haben sich zu eigenen
+Zeichen entwickelt, so bspw. et → \&,  \longS\kern-.5pt s → ß.
 
 \section{Ziffern}
 \label{sec:Ziffern}
