@@ -411,9 +411,9 @@ brauchen unterschiedliche Abstände zwischen den Glyphen; siehe
 Bei sog. \emph{dicktengleichen} Schriften
 (engl. \emph{\foreignlanguage{british}{monospaced}}) haben alle
 Glyphen dieselbe Dickte.  Diese Schriften waren bspw. auf
-Schreibmaschinen üblich oder werden auf Computern in
-Terminalemulatoren oder in Reintext-Editoren verwendet.
-\texttt{Dicktengleicher Text sieht bspw. so aus.}
+Schreibmaschinen üblich und werden auf Computern in Terminalemulatoren
+oder Reintext-Editoren verwendet.  \texttt{Dicktengleicher Text sieht
+  bspw. so aus.}
 
 Eine gleichmäßige Vergrößerung der Glyphenabstände nennt man
 \emph{Sperren} (engl. \emph{\foreignlanguage{british}{letterspacing}})
@@ -434,7 +434,47 @@ Blocksatz; ansonsten braucht man es nicht (und möchte es nicht, denn
 es sieht schlecht aus).  Trotzdem ist hier ein \textls[-50]{Beispiel},
 das deulich zu eng aussieht.
 
-%% Kerning
+Um ein gleichmäßiges Schriftbild zu erhalten, ist es bei bestimmten
+Glyphenkombinationen nötig, den Abstand zwischen den Glyphen
+anzupassen.  Das bezeichnet man als \emph{Unterschneidung}
+(engl. \emph{\foreignlanguage{british}{kerning}}).  Dabei werden
+bspw. Glyphen mit Schrägen näher aneinandergerückt, siehe
+\cref{fig:Unterschneidung}.  Digitalschriften kommen mit
+\emph{Un\-ter\-schnei\-dungs-Tabellen}, die für sehr viele Situationen
+eine sinnvolle automatische Unerschneidung ermöglichen.  Muss man
+trotzdem einmal manuell nachhelfen (vgl. \cref{fig:xkcd_kerning}),
+geht das in \TeX\ mit dem Befehl \verb!\kern!.  So wird
+bspw. \verb!Ha\kern.75pt ll\kern-.5pt o! zu Ha\kern.75pt ll\kern-.5pt
+o, was zwar schlimm aussieht, aber das Prinzip verdeutlicht.
+
+\begin{figure}
+  \centering
+
+  \subfloat[Ohne Unterschneidung]
+  {\begin{minipage}[b]{.5\textwidth}
+      \centering
+      \Huge {A}{v}
+    \end{minipage}}
+  %
+  \subfloat[Mit Unterschneidung]
+  {\begin{minipage}[b]{.5\textwidth}
+      \centering
+      \Huge Av
+    \end{minipage}}
+
+  \caption{Unterschneidung bei der Buchstabenfolge »Av«}
+  \label{fig:Unterschneidung}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=.5\textwidth]{xkcd_Kerning}
+  \caption{\href{http://xkcd.com/1015/}{xkcd 1015: Kerning}\protect\footnotemark}
+  \label{fig:xkcd_kerning}
+\end{figure}
+\footnotetext{Autor: Randall Munroe,
+  Lizenz: \href{https://creativecommons.org/licenses/by-nc/2.5/}
+  {\acr{CC BY-NC}\,2.5}}
 
 \section{Ligaturen}
 
