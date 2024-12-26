@@ -594,12 +594,53 @@ mikrotypographische Feinheiten an\footnote{Bspw. verwendet es
   \label{fig:Randausgleich}
 \end{figure}
 
-\section{Beispiele}
+\section{Textbeispiele}
 
-{\fontfamily{pplj}\selectfont Palatino 1234 \emph{kursiv} \textsc{kapitälchen}}
-%% Garamond, Palatino, Minion, Optima/Classico, Times, Helvetica
+Abschließend geben wir ein paar Blindtext-Beispiele in verschiedenen
+Schriftfamilien.  Alle sind mit der \LaTeX-Option \verb!11pt! gesetzt,
+also in Schriftgröße 10,95\,pt.
 
-%% Jeweils auch die lustigen Namen nach DIN 16518 erwähnen!
+\newcommand*{\testText}{0123456789 \lipsum[1][1]
+  \textit{\lipsum[1][2]} \textbf{\lipsum[1][3]}
+  \textit{\textbf{\lipsum[1][4]}} \textsc{\lipsum[1][5]}}
+
+\subsection{Garamond}
+
+{\fontfamily{EBGaramond-OsF}\selectfont \testText}
+
+\subsection{Palatino}
+
+{\linespread{1.05}\fontfamily{pplj}\selectfont \testText}
+
+\subsection{Minion}
+
+\testText
+
+\subsection{Times}
+
+{\fontfamily{ptm}\selectfont \testText}
+
+\subsection{Latin Modern}
+
+{\fontfamily{lmr}\selectfont \testText}
+
+\subsection{Bitstream Charter}
+
+{\fontfamily{bch}\selectfont \testText}
+
+\subsection{Helvetica}
+
+{\fontfamily{phv}\selectfont \testText}
+
+\subsection{Avant Garde}
+
+{\fontfamily{pag}\selectfont \testText
+
+\textbf{adidas}}
+
+\subsection{Classico}
+
+{\sffamily \testText}
 
 %%% Local Variables:
 %%% mode: latex
