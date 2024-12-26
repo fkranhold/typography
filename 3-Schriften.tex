@@ -357,7 +357,7 @@ Standard-Zeilenabstände wie in \cref{tab:LaTeX_font_sizes} angegeben.
 
 \begin{table}
   \centering
-  \begin{tabular}{rrr}
+  \begin{tabular}{ccc}
     \toprule
     \tableHead{Klassenoption} & \tableHead{Schriftgrad} & \tableHead{Zeilenabstand}\\
     \midrule
@@ -413,7 +413,8 @@ Bei sog. \emph{dicktengleichen} Schriften
 Glyphen dieselbe Dickte.  Diese Schriften waren bspw. auf
 Schreibmaschinen üblich und werden auf Computern in Terminalemulatoren
 oder Reintext-Editoren verwendet.  \texttt{Dicktengleicher Text sieht
-  bspw. so aus.}
+  bspw. so aus.}  Eine Schrift mit variabler Dickte heißt
+\emph{Proportionalschrift}.
 
 Eine gleichmäßige Vergrößerung der Glyphenabstände nennt man
 \emph{Sperren} (engl. \emph{\foreignlanguage{british}{letterspacing}})
@@ -523,7 +524,41 @@ Zeichen entwickelt, so bspw. et → \&,  \longS\kern-.5pt s → ß.
 \section{Ziffern}
 \label{sec:Ziffern}
 
-%% Minuskelziffern, Majuskelziffern, Tabellenziffern / lining figures
+Gute Schriften haben pro Schriftschnitt verschiedene Sätze von
+Ziffern, die an verschiedene Anwendungszwecke angepasst sind.  Im
+Fließtext werden Ziffern als sog. \emph{Minuskelziffern} (auch
+\emph{Mediävalziffern}, engl. \emph{\foreignlanguage{british}{text
+    figures}} oder \emph{\foreignlanguage{british}{old style
+    figures}}) gesetzt, die sich harmonisch in den Text einfügen.  Sie
+sind wie Kleinbuchstaben gestaltet, haben also teilweise Unter- oder
+Oberlängen.  Ihre Oberlängen reichen jedoch auch bei
+Renaissance-Antiquas nur bis zur H-Linie statt zur k-Linie.  Ziffern,
+die stattdessen zur Verwendung im Zusammenhang mit Großbuchstaben
+entworfen sind, heißen \emph{Majuskelziffern} (auch
+\emph{Versalziffern}, engl. \emph{\foreignlanguage{british}{lining
+    figures}} oder \emph{\foreignlanguage{british}{modern figures}});
+sie reichen wie Großbuchstaben von der Grund- zur H-Linie.  Sowohl
+Minuskel- als auch Majuskelziffern gibt es zuätzlich auch als
+dicktengleiche Glyphen (auch in Proportionalschriften), um in Tabellen
+mit Zahleneinträgen eine untereinander ausgerichtete Darstellung zu
+ermöglichen.  Diese \emph{Tabellenziffern}
+(engl. \emph{\foreignlanguage{british}{table figures}}) sind
+üblicherweise ein Halbgeviert breit.  Eine Übersicht über die
+verschiedenen Arten von Ziffern findet sich in \cref{tab:Ziffern}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ccc}
+    \toprule
+    \tableHead{Dickte} & \tableHead{Minuskelziffern} & \tableHead{Majuskelziffern}\\
+    \midrule
+    proportional & 0123456789 & \figureversion{lf}{0123456789} \\
+    gleich & \tab{0123456789} & \figureversion{lf,tab}{0123456789} \\
+    \bottomrule
+  \end{tabular}
+  \caption{Verschiedene Arten von Ziffern}
+  \label{tab:Ziffern}
+\end{table}
 
 \section{Hängende Interpunktion}
 
