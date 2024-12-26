@@ -31,7 +31,7 @@ nennt man dann auch eine \emph{Schriftfamilie}.\footnote{Das ist das
   der Begriffe \emph{Schriftart} und \emph{-familie} herausbekommen zu
   haben glaube.  Allerdings fällt mir spontan (während ich diesen Text
   schreibe) kein Beispiel für eine Schriftart ein, von der es nur
-  einen Schnitt gibt, die also keine Familie ist.}
+  einen Schnitt gibt, die also keine Familie ist.}\looseness-1
 
 Schriftarten werden nach Aspekten ihrer Gestaltung klassifiziert.  Wir
 beschäf"|tigen uns hier nur mit \emph{Satzschriften} (also keine
@@ -94,7 +94,7 @@ unterscheiden sich dabei durch die Art der an den Glyphen vorhandenen
   Hauptschriftgruppe ist derselbe wie der der Gattung; diese
   Schriftarten waren nämlich die ursprünglichen Antiqua-Schriften).
   Nach ihrem historischen Entstehungszeitpunkt werden die folgenden
-  drei Schriftuntergruppen unterschieden:
+  drei Schriftuntergruppen unterschieden:\looseness-1
   \begin{itemize}
   \item \emph{Renaissance-Antiqua}, mit den Schriftnebengruppen
     \emph{Venezianische} und \emph{Französische Renaissance-Antiqua}:
@@ -146,7 +146,7 @@ Angeblich™ lesen sich im Fließtext Schriften mit Serifen leichter als
 Grotesken.  Es gibt dazu auch einige Untersuchungen; soweit ich
 (Philip) weiß, sind die aber zu keinen aussagekräf"|tigen (sprich
 statistisch signifikanten) Ergebnissen gekommen.  (Tatsächlich sind
-serifenlose Schriften wohl teilweise hilfreich bei Legasthenie.)  Auf
+serifen\emph{lose} Schriften wohl teilweise hilfreich bei Legasthenie.)  Auf
 jeden Fall sind Grotesken eine jüngere Erfindung (sie sind Anfang des
 19.\,Jahrhunderts entstanden), und »traditionell« werden gedruckte
 Fließtexte in Antiqua gesetzt.  Besonders bei (hochqualitativen)
@@ -154,7 +154,7 @@ Büchern sind Renaissance-Antiquas üblich.  Auf nicht allzu hoch
 aufgelösten Pixel-Bildschirmen sind Serifen oft eher schlecht in
 gleichmäßiger Qualität darstellbar; daher werden in
 Computer-Kontexten, bspw. im Webdesign, häufig auch serifenlose
-Schriften als Brotschrift eingesetzt.
+Schriften als Brotschrift eingesetzt.\looseness-1
 
 \section{Schriftschnitte}
 \label{sec:Schnitte}
@@ -168,7 +168,7 @@ sich üblicherweise in den \emph{Auszeichnungsmerkmalen}
 \end{itemize}
 Grundsätzlich können Ausprägungen der verschiedenen Merkmale frei
 miteinander kombiniert werden; ob eine konkrete Schriftfamilie den
-entsprechenden Schnitt hat ist eine andere Frage (und ebenso, ob und
+entsprechenden Schnitt hat, ist eine andere Frage (und ebenso, ob und
 wann man »merkwürdige« Schnitte einsetzen möchte).
 
 Die \emph{Schriftstärke} bezeichnet die Dicke der Striche, aus denen
@@ -177,7 +177,7 @@ Schriftstärken \emph{normal}
 (engl. \emph{\foreignlanguage{british}{regular}}) und \emph{fett}
 (engl. \emph{\foreignlanguage{british}{bold}}); viele Schriftfamilien
 bieten aber auch Zwischenstufen (siehe \cref{fig:Schriftstärken}).
-Die Schriftstärke hat einen Einfluss auf den \emph{Grauwert} der
+Die Schriftstärke hat einen Einfluss auf den [O\emph{Grauwert} der
 Schrift: stärkere Glyphen wirken dunkler.
 
 \begin{figure}
@@ -269,7 +269,7 @@ die an verschiedene Schriftgrade angepasst sind (siehe
   {Wolfgang Beinert},
   \href{https://www.typolexikon.de/}{www.typolexikon.de}}
 
-\section{Schriftlinien und Maßeinheiten}
+\section{Schriftlinien und Ma\texorpdfstring{ss}{ß}einheiten}
 \label{sec:Linien}
 
 Die \emph{metrische} Gestaltung einer Schrift, also die Größe ihrer
@@ -382,16 +382,16 @@ die Zeilen sonst zu »gedrängt« wirken; zum Vergleich siehe
   \centering
 
   \subfloat[Standardwert]
-  {\begin{minipage}[b]{.35\textwidth}
+  {\begin{minipage}[b]{.38\textwidth}
       \fontfamily{pplj}\selectfont\smaller[.5]
-      \lipsum[1][1-3]\par
+      \lipsum[1][1-2]\par
     \end{minipage}}
   \hspace{.1\textwidth}
   \subfloat[Vergrößert]
-  {\begin{minipage}[b]{.35\textwidth}
+  {\begin{minipage}[b]{.38\textwidth}
       \linespread{1.05}
       \fontfamily{pplj}\selectfont\smaller[.5]
-      \lipsum[1][1-3]\par
+      \lipsum[1][1-2]\par
     \end{minipage}}
 
   \caption{Anpassung des Zeilenabstands bei \emph{Palatino}}
@@ -399,6 +399,7 @@ die Zeilen sonst zu »gedrängt« wirken; zum Vergleich siehe
 \end{figure}
 
 \section{Laufweite, Sperren und Unterschneidung}
+\label{sec:sperren}
 
 Die horizontale Weite einer Schrift nennt man die \emph{Laufweite}.
 Diese ist bedingt durch die Breite der einzelnen Glyphen
@@ -416,7 +417,7 @@ oder Reintext-Editoren verwendet.  \texttt{Dicktengleicher Text sieht
   bspw. so aus.}  Eine Schrift mit variabler Dickte heißt
 \emph{Proportionalschrift}.
 
-\enlargethispage{\baselineskip}
+%\enlargethispage{\baselineskip}
 
 Eine gleichmäßige Vergrößerung der Glyphenabstände nennt man
 \emph{Sperren} (engl. \emph{\foreignlanguage{british}{letterspacing}})
@@ -518,7 +519,7 @@ bspw. \emph{Kaffee}, aber \emph{auf"|fangen}.  In \LaTeX\ mit dem
 \texttt{babel}-Paket wird das über den \emph{Ligaturbrecher} \verb!"|!
 erreicht.
 
-\enlargethispage{\baselineskip}
+%\enlargethispage{\baselineskip}
 
 \newcommand*{\longS}{\includegraphics{long_s}\kern-.5pt}
 
@@ -585,13 +586,13 @@ mikrotypographische Feinheiten an\footnote{Bspw. verwendet es
   \subfloat[Deaktiviert]
   {\begin{minipage}[b]{.4\textwidth}
       \microtypesetup{activate=false}
-      »\lipsum[1][1-3]«
+      »\lipsum[1][1-2]«\looseness-1
     \end{minipage}}
   \hspace{.1\textwidth}
   \subfloat[Aktiviert]
   {\begin{minipage}[b]{.4\textwidth}
       \microtypesetup{expansion=false}
-      »\lipsum[1][1-3]«
+      »\lipsum[1][1-2]«\looseness-1
     \end{minipage}}
 
   \caption{Randausgleich}
