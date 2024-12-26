@@ -560,9 +560,39 @@ verschiedenen Arten von Ziffern findet sich in \cref{tab:Ziffern}.
   \label{tab:Ziffern}
 \end{table}
 
-\section{Hängende Interpunktion}
+\section{Randausgleich}
 
-%% Kurz erklären, microtype erwähnen (auch sonst toll!)
+Um bei Blocksatz optisch geradere vertikale Ränder zu erzeugen, kann
+\emph{Randausgleich} (engl. \emph{\foreignlanguage{british}{character
+    protrusion}}) verwendet werden.  Dabei werden am Rand stehende
+niedrige Sonderzeichen, bspw. Trennstriche, sowie entsprechende Teile
+von Buchstaben (wie Serifen) minimal verschoben, sodass sie \emph{über
+  den Rand hinaus} ragen.  Dadurch ergibt sich ein gleichmäßiger
+wirkender Rand als wenn die Glyphen tatsächlich am Rand enden (siehe
+\cref{fig:Randausgleich}).  Für pdf\LaTeX, \LuaTeX\ und \XeTeX\ bietet
+das Paket \texttt{microtype} Randausgleich sowie einige weitere
+mikrotypographische Feinheiten an\footnote{Bspw. verwendet es
+  \emph{\foreignlanguage{british}{character expansion}}, um Blocksatz
+  zu optimieren.}; es bietet sich an, dieses Paket immer zu laden.
+
+\begin{figure}
+  \centering
+
+  \subfloat[Deaktiviert]
+  {\begin{minipage}[b]{.4\textwidth}
+      \microtypesetup{activate=false}
+      »\lipsum[1][1-3]«
+    \end{minipage}}
+  \hspace{.1\textwidth}
+  \subfloat[Aktiviert]
+  {\begin{minipage}[b]{.4\textwidth}
+      \microtypesetup{expansion=false}
+      »\lipsum[1][1-3]«
+    \end{minipage}}
+
+  \caption{Randausgleich}
+  \label{fig:Randausgleich}
+\end{figure}
 
 \section{Beispiele}
 
