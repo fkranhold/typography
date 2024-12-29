@@ -16,6 +16,34 @@
 
 %% Serifenlose
 \usepackage{classico}
+%% Damit die (Fake-)Kapitälchen auch mit neuen Versionen des
+%% classico-Pakets funktionieren
+\pdfmapfile{=classico_uop.map}
+\makeatletter
+%% Leider können wir nicht einfach zusätzliche font shapes definieren,
+%% sondern müssen alles hier tun.  Nun gut.
+\DeclareFontFamily{T1}{URWClassico-LF}{}
+\DeclareFontShape{T1}{URWClassico-LF}{b}{it}{<-> URWClassico-BoldItalic-lf-t1}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bold}{it}{<-> alias * URWClassico-LF/b/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{b}{n}{<-> URWClassico-Bold-lf-t1}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bold}{n}{<-> alias * URWClassico-LF/b/n}{}
+\DeclareFontShape{T1}{URWClassico-LF}{b}{sl}{<-> ssub * URWClassico-LF/b/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bold}{sl}{<-> ssub * URWClassico-LF/bold/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{b}{sc}{<-> uopbc8t}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bold}{sc}{<-> alias * URWClassico-LF/b/sc}{}
+\DeclareFontShape{T1}{URWClassico-LF}{m}{it}{<-> URWClassico-Italic-lf-t1}{}
+\DeclareFontShape{T1}{URWClassico-LF}{regular}{it}{<-> alias * URWClassico-LF/m/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{m}{n}{<-> URWClassico-Regular-lf-t1}{}
+\DeclareFontShape{T1}{URWClassico-LF}{regular}{n}{<-> alias * URWClassico-LF/m/n}{}
+\DeclareFontShape{T1}{URWClassico-LF}{m}{sl}{<-> ssub * URWClassico-LF/m/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{regular}{sl}{<-> ssub * URWClassico-LF/regular/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{m}{sc}{<-> uoprc8t}{}
+\DeclareFontShape{T1}{URWClassico-LF}{regular}{sc}{<-> alias * URWClassico-LF/regular/sc}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bx}{it}{<-> ssub * URWClassico-LF/b/it}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bx}{sl}{<-> ssub * URWClassico-LF/b/sl}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bx}{n}{<-> ssub * URWClassico-LF/b/n}{}
+\DeclareFontShape{T1}{URWClassico-LF}{bx}{sc}{<-> ssub * URWClassico-LF/b/sc}{}
+\makeatother
 
 %% Eine Dicktengleiche
 \usepackage[scaled=.8]{beramono}

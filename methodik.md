@@ -11,7 +11,39 @@
   * Gemeinsam in LaTeX ausprobieren (Beamer)
 
 # §3: Schriften #
-  * Kerning: type.method.ac spielen
+  * 3.1
+      * Bücher mitbringen lassen.  Vergleicht Schriften: Was fällt
+        Euch auf?  Was für Unterschiede gibt es?
+      * Vorgängerschriften zeigen: Capitalis monumentalis und ältere
+        römische Kursive → jüngere römische Kursive → karolingische
+        Minuskel → humanistische Minuskel
+  * 3.2
+      * Ausprobieren (LibreOffice): Wie sehen verschiedene Schnitte
+        bei verschiedenen Familien aus?
+      * Kursive Schrift: Humanistische Kursive zeigen
+  * 3.3
+      * Ein Wort aufs Flipchart schreiben.  Was seht ihr: Teile
+        verschiedener Buchstaben?  Höhe?  Danach Liniensystem
+        einzeichnen, danach erst im Skript lesen.
+      * Bleiletter: auch „Fleisch“ erklären.
+      * Zeilenabstände ausprobieren (LibreOffice): Direkt
+        „aufeinandersitzende“ Zeilen durch Á vs. Buchstabe mit
+        Unterlänge und ähnliches.  Auch in LaTeX.
+  * 3.4
+      * Sperren: ausprobieren!  (LibreOffice und/oder LaTeX)
+      * Kerning: type.method.ac spielen
+  * 3.5 
+      * In mitgebrachten Büchern gucken: Welche Ligaturen gibt es?
+        Habt Ihr sie vorher überhaupt bemerkt?
+      * Irgendeinen Text aus dem Internet suchen
+        (bspw. Wikipedia-Artikel „Ligatur (Typografie)“?), in LaTeX
+        setzen und Ligaturbrecher einfügen.
+  * 3.6
+      * Ziffern in mitgebrachten Büchern?
+      * Ausprobieren.
+  * 3.7
+      * Randausgleich in mitgebrachten Büchern?
+      * Ausprobieren mit microtype in LaTeX.
 
 # §4: Seitenlayout #
   * (Sowieso: Immer Sachen ausprobieren)
